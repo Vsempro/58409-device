@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Vladimir Semyonov](https://up.htmlacademy.ru/htmlcss/17/user/58409).
-* Наставник: `Неизвестно`.
+* Наставник: [Anton Popov].
 
 ---
 
