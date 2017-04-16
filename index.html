@@ -2,11 +2,202 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Магазин гаджетов "Девайс"</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <header class="main-header">
+      <div class="container">
+        <p class="logo black">Device</p>
+        <div class="user-block">
+          <ul>
+            <li><a href="#">Поиск по сайту</a></li>
+            <li><a href="#">Войти</a></li>
+            <li><a href="#">Сравнить</a></li>
+            <li><a href="#">Корзина</a></li>
+          </ul>
+        </div>
+        <nav class="main-mavigation">
+          <ul>
+            <li>
+              <a href="#">Каталог товаров</a>
+            </li>
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Гарантия</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <div class="slider">
+        <figure class="slider-picture">
+          <img src="http://placehold.it/500x300" width="500" height="300"
+               alt="Монопод">
+        </figure>
+        <div class="slider-content">
+          <b class="bold">
+            Делай селфи,<br>
+            как Бен Стиллер
+          </b>
+          <p>Самая длинная палка для селфи доступна в нашем магазине.<br>
+             Восемь (Восемь, Карл!) метров и весом всего 5 килограмм.
+          </p>
+          <a class="mark" href="#">Подробнее</a>
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <div class="more">
+            <div class="more-item">
+              <b class="more-value">8,5 м</b>
+              <p>Длина палки</p>
+            </div>
+            <div class="more-item">
+              <b class="more-value">5 кг</b>
+              <p>Вес палки</p>
+            </div>
+            <div class="more-item">
+              <b class="more-value">Карбон</b>
+              <p>Материал</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="goods">
+        <div class="goods-item">
+          <a href="#">
+            <img src="http://placehold.it/150x150" width="150" height="150"
+                 alt="Виртуальные очки">
+            Виртуальная реальность
+          </a>
+        </div>
+        <div class="goods-item">
+          <a href="#">
+            <img src="http://placehold.it/150x150" width="150" height="150"
+                 alt="Моноподы для селфи">
+            Моноподы для селфи
+          </a>
+        </div>
+        <div class="goods-item">
+          <a href="#">
+            <img src="http://placehold.it/150x150" width="150" height="150"
+                 alt="Экшн-камеры">
+            Экшн-камеры
+          </a>
+        </div>
+        <div class="goods-item">
+          <a href="#">
+            <img src="http://placehold.it/150x150" width="150" height="150"
+                 alt="Фитнес-браслеты">
+            Фитнес-браслеты
+          </a>
+        </div>
+        <div class="goods-item">
+          <a href="#">
+            <img src="http://placehold.it/150x150" width="150" height="150"
+                 alt="Умные часы">
+            Умные часы
+          </a>
+        </div>
+        <div class="goods-item">
+          <a href="#">
+            <img src="http://placehold.it/150x150" width="150" height="150"
+                 alt="Квадрокоптеры">
+            Квадрокоптеры
+          </a>
+        </div>
+      </section>
+      <section class="advantages">
+        <ul>
+          <li><a class="mark" href="#">Доставка</a></li>
+          <li><a class="mark" href="#">Гарантия</a></li>
+          <li><a class="mark" href="#">Кредит</a></li>
+        </ul>
+        <b class="bold">Доставка</b>
+        <p>
+          Мы с удовольствием доставим ваш товар прямо к вашему<br>
+          подъезду совершенно бесплатно! Ведь мы неплохо<br>
+          заработаем, поднимая его на ваш этаж.
+        </p>
+      </section>
+      <div class="index-content">
+        <div class="index-content-left">
+          <b class="bold">О нас</b>
+          <p>
+            Огроьный выбор гаджетов не оставит равнодушным гика,<br>
+            который есть в каждом из нас.
+          </p>
+          <p>
+            Мы можем доставить ваш товар в самые отдалённые точки<br>
+            России! Device работает со многими транспортными компаниями:
+          </p>
+          <ul>
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспкдиция</li>
+          </ul>
+          <a class="mark" href="#">Подробнее о нас</a>
+        </div>
+        <div class="index-content-right">
+          <b class="bold">Контакты</b>
+          <p>
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
+            проверить работоспособность покупки. Всякое бывает.
+          </p>
+          <a href="#"><img src="http://placehold.it/500x300" width="500"
+             height="300" alt="Месторасположение фирмы на карте"></a>
+          <a class="mark" href="#">Напишите нам</a>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="container-top">
+          <p class="logo yellow">Device</p>
+          <div class="user">
+            <ul>
+              <li>
+                <a href="#">Войти</a>
+              </li>
+              <li>
+                <a href="#">Свернуть</a>
+              </li>
+              <li>
+                <a href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-middle">
+          <p class="footer">г. Москва, ул. Строителей, 15</p>
+          <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <p class="footer">Тел.:+7(495)495-95-95</p>
+        </div>
+        <div class="container-bottom">
+          <div class="social">
+            <a class="social-btn social-btn-vk" href="#">ВКонтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фесйбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          </div>
+          <div class="copyright">
+            <a href="(https://htmlacademy.ru/intensive/htmlcss)">
+              <img src="http://placehold.it/20x30" width="20" height="30"
+                   alt="Логотип Академии">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
