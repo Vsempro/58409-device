@@ -7,18 +7,14 @@
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="logo black">
+        <a class="logo black" href="index.html">
           <img src="http://placehold.it/196x17" width="196" height="17"
                alt="Лого Device">
-        </div>
-        <div class="user-block">
-          <ul>
-            <li><a href="#">Поиск по сайту</a></li>
-            <li><a href="#">Войти</a></li>
-            <li><a href="#">Сравнить</a></li>
-            <li><a href="#">Корзина</a></li>
-          </ul>
-        </div>
+        </a>
+        <form class="search-form" action="#" method="get">
+          <input type="text" name="search">
+          <input type="submit" value="Поиск по сайту">
+        </form>
         <nav class="main-mavigation">
           <ul>
             <li><a href="#">Каталог товаров</a>
@@ -54,20 +50,30 @@
             </li>
           </ul>
         </nav>
+        <div class="user-block">
+          <a class="user-form" href="#">Войти</a>
+          <a href="#">Сравнить</a>
+          <a href="#">Корзина</a>
+        </div>
       </div>
     </header>
     <main class="container">
-      <div class="slider">
-        <figure class="slider-picture">
+      <section class="slider">
+        <figure class="slider-image">
           <img src="http://placehold.it/500x300" width="500" height="300"
                alt="Монопод">
         </figure>
         <div class="slider-content">
           <h1>Делай селфи, как Бен Стиллер</h1>
-          <p>Самая длинная палка для селфи доступна в нашем магазине.<br>
+          <p>Самая длинная палка для селфи доступна в нашем магазине.
              Восемь (Восемь, Карл!) метров и весом всего 5 килограмм.
           </p>
           <a class="mark" href="#">Подробнее</a>
+          <form class="slider" action="#" method="get">
+            <input type="radio" name="slide" value="slide1" checked>
+            <input type="radio" name="slide" value="slide2">
+            <input type="radio" name="slide" value="slide3">
+          </form>
           <div class="more">
             <div class="more-item">
               <b class="more-value">8,5 м</b>
@@ -83,66 +89,45 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="goods-item">
-        <dl>
-          <dt>
-            <img src="http://placehold.it/150x150" width="150" height="150"
-                 alt="Виртуальные очки">
-          </dt>
-            <dd>
-              <a href="#">Виртуальная реальность</a>
-            </dd>
-          <dt>
-            <img src="http://placehold.it/150x150" width="150" height="150"
-                 alt="Моноподы для селфи">
-          </dt>
-            <dd>
-              <a href="#">Моноподы для селфи</a>
-            </dd>
-          <dt>
-            <img src="http://placehold.it/150x150" width="150" height="150"
-                 alt="Экшн-камеры">
-          </dt>
-            <dd>
-              <a href="#">Экшн-камеры</a>
-            </dd>
-          <dt>
-            <img src="http://placehold.it/150x150" width="150" height="150"
-                 alt="Фитнес-браслеты">
-          </dt>
-            <dd>
-              <a href="#">Фитнес-браслеты</a>
-            </dd>
-          <dt>
-            <img src="http://placehold.it/150x150" width="150" height="150"
-                 alt="Умные часы">
-          </dt>
-            <dd>
-              <a href="#">Умные часы</a>
-            </dd>
-          <dt>
-            <img src="http://placehold.it/150x150" width="150" height="150"
-                 alt="Квадрокоптеры">
-          </dt>
-            <dd>
-              <a href="#">Квадрокоптеры</a>
-            </dd>
-        </dl>
-      </div>
-      <section class="advantages">
-        <ul>
-          <li><a class="mark" href="#">Доставка</a></li>
-          <li><a class="mark" href="#">Гарантия</a></li>
-          <li><a class="mark" href="#">Кредит</a></li>
-        </ul>
-        <b class="bold">Доставка</b>
-        <p>
-          Мы с удовольствием доставим ваш товар прямо к вашему<br>
-          подъезду совершенно бесплатно! Ведь мы неплохо<br>
-          заработаем, поднимая его на ваш этаж.
-        </p>
       </section>
+      <div class="goods-item">
+        <a href="#">
+          Виртуальная реальность
+        </a>
+        <a href="#">
+          Моноподы для селфи
+        </a>
+        <a href="#">
+          Экшн-камеры
+        </a>
+        <a href="#">
+          Фитнес-браслеты
+        </a>
+        <a href="#">
+          Умные часы
+        </a>
+        <a href="#">
+          Квадрокоптеры
+        </a>
+      </div>
+      <div class="advantages">
+        <dl class="advantages-servises">
+          <dt>Доставка</dt>
+            <dd>Мы с удовольствием доставим ваш товар прямо к вашему
+            подъезду совершенно бесплатно! Ведь мы неплохо
+            заработаем, поднимая его на ваш этаж.</dd>
+          <dt>Гарантия</dt>
+            <dd>Про гарантию</dd>
+          <dt>Кредит</dt>
+            <dd>Про кредит</dd>
+          </dl>
+          <div class="advantages-company">
+            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+          </div>
+      </div>
       <div class="index-content">
         <div class="index-content-left">
           <h2>О нас</h2>
@@ -168,7 +153,7 @@
             проверить работоспособность покупки. Всякое бывает.
           </p>
           <a href="#"><img src="http://placehold.it/500x300" width="500"
-             height="300" alt="Месторасположение фирмы на карте"></a>
+             height="300" alt="Месторасположение фирмы на карте: ул. Строителей, д.15"></a>
           <a class="mark" href="#">Напишите нам</a>
         </div>
       </div>
@@ -208,8 +193,7 @@
           </div>
           <div class="copyright">
             <a href="(https://htmlacademy.ru/intensive/htmlcss)">
-              <img src="http://placehold.it/20x30" width="20" height="30"
-                   alt="Логотип Академии">
+              <img src="http://placehold.it/20x30" width="20" height="30" alt="">
             </a>
           </div>
         </div>

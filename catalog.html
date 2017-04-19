@@ -7,31 +7,16 @@
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="user-block">
-          <ul>
-            <li>
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li>Валентин Петухов</li>
-            <li>
-              <a href="#">Выйти</a>
-            </li>
-            <li>
-              <a href="#">Сравнить</a>
-            </li>
-            <li>
-              <a href="#">Корзина</a>
-            </li>
-          </ul>
-        </div>
+        <a class="logo black" href="index.html">
+          <img src="http://placehold.it/196x17" width="196" height="17"
+               alt="Лого Device">
+        </a>
+        <form class="search-form" action="#" method="get">
+          <input type="text" name="search">
+          <input type="submit" value="Поиск по сайту">
+        </form>
         <nav class="main-mavigation">
           <ul>
-            <li>
-              <a class="logo black" href="index.html">
-                <img src="http://placehold.it/196x17" width="196" height="17"
-                     alt="Лого Device">
-              </a>
-            </li>
             <li><a href="#">Каталог товаров</a>
               <ul>
                 <li>
@@ -65,6 +50,12 @@
             </li>
           </ul>
         </nav>
+        <div class="user-block">
+          <a class="user-name" href="#">Валентин Петухов</a>
+          <a href="#">Выйти</a>
+          <a href="#">Сравнить</a>
+          <a href="#">Корзина</a>
+        </div>
       </div>
     </header>
     <main class="container">
@@ -85,26 +76,31 @@
       <aside class="filter">
         <h2>Фильтр</h2>
         <form class="aside-filter" action="index.html" method="get">
-          <p>Стоимость<p><br>
-          <div class="slider-range" id="slider"></div>
-          <p>Цвет</p>
+          <h3>Стоимость</h3>
+          <div class="slider-range" id="slider">
+            <div class="circle static"></div>
+            <div class="circle dinamic"></div>
+            <p>от 0</p>
+            <p>до 5000</p>
+          </div>
+          <h3>Цвет</h3>
           <input type="checkbox" id="black" checked>
-          <label for="black">Чёрный</label><br>
+          <label for="black">Чёрный</label>
           <input type="checkbox" id="white">
-          <label for="white">Белый</label><br>
+          <label for="white">Белый</label>
           <input type="checkbox" id="blue" checked>
-          <label for="blue">Синий</label><br>
+          <label for="blue">Синий</label>
           <input type="checkbox" id="red" checked>
-          <label for="red">Красный</label><br>
+          <label for="red">Красный</label>
           <input type="checkbox" id="pink">
-          <label for="pink">Розовый</label><br>
-          <p>Bluetooth</p>
+          <label for="pink">Розовый</label>
+          <h3>Bluetooth</h3>
           <label>
             <input type="radio" name="bluetooth" value="1" checked> Есть
-          </label><br>
+          </label>
           <label>
             <input type="radio" name="bluetooth" value="0"> Нет
-          </label><br>
+          </label>
           <input type="submit" value="Показать">
         </form>
       </aside>
@@ -113,7 +109,7 @@
           <h2>Сортировка:</h2>
           <ul>
             <li>
-              <a href="#">По цене</a>
+              По цене
             </li>
             <li>
               <a href="#">По типу</a>
@@ -123,14 +119,12 @@
             </li>
             <li>
               <a class="sorting-icon sorting-icon-up" href="#">
-                <img src="http://placehold.it/17x9" width="17" height="9"
-                     alt="По возрастанию">
+                По возрастанию
               </a>
             </li>
             <li>
-              <a class="sorting-icon sorting-icon-down" href="#">
-                <img src="http://placehold.it/17x9" width="17" height="9"
-                     alt="По убыванию">
+              <a class="sorting-icon sorting-icon-down active" href="#">
+                По убыванию
               </a>
             </li>
           </ul>
@@ -139,29 +133,29 @@
           <figure class="goods-item">
             <img src="http://placehold.it/300x300" width="300" height="300"
                  alt="Монопод любительский">
-            <figcaption>Любительская селфи-палка <span>500 руб</span></figcaption>
+            <figcaption>Любительская селфи-палка <span>500 руб.</span></figcaption>
           </figure>
           <figure class="goods-item">
             <img src="http://placehold.it/300x300" width="300" height="300"
                  alt="Монопод профессиональный">
-            <figcaption>Профессиональная селфи-палка <span>1500 руб</span></figcaption>
+            <figcaption>Профессиональная селфи-палка <span>1500 руб.</span></figcaption>
           </figure>
           <figure class="goods-item">
             <img src="http://placehold.it/300x300" width="300" height="300"
                  alt="Монопод непотопляемый">
-            <figcaption>Непотопляемая селфи-палка <span>2500 руб</span></figcaption>
+            <figcaption>Непотопляемая селфи-палка <span>2500 руб.</span></figcaption>
           </figure>
           <figure class="goods-item">
             <img src="http://placehold.it/300x300" width="300" height="300"
                  alt="Монопод Следуй за мной">
-            <figcaption>Селфи-палка "Следуй за мной" <span>4900 руб</span></figcaption>
+            <figcaption>Селфи-палка "Следуй за мной" <span>4900 руб.</span></figcaption>
           </figure>
         </div>
       </section>
-      <div class="scrol">
+      <div class="pagination">
         <ul>
-          <li><a href="#">Назад</a></li>
-          <li><a href="#">1</a></li>
+          <li>Назад</li>
+          <li>1</li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">Вперёд</a></li>
@@ -171,19 +165,14 @@
     <footer class="main-footer">
       <div class="container">
         <div class="container-top">
-          <p class="logo yellow">Device</p>
+          <a class="logo yellow" href="index.html">
+            <img src="http://placehold.it/196x17" width="196" height="17"
+                 alt="Лого Device">
+          </a>
           <div class="user">
-            <ul>
-              <li>
-                <a href="#">Выйти</a>
-              </li>
-              <li>
-                <a href="#">Свернуть</a>
-              </li>
-              <li>
-                <a href="#">Корзина</a>
-              </li>
-            </ul>
+            <a href="#">Выйти</a>
+            <a href="#">Свернуть</a>
+            <a href="#">Корзина</a>
           </div>
         </div>
         <div class="container-middle">
@@ -203,8 +192,7 @@
           </div>
           <div class="copyright">
             <a href="(https://htmlacademy.ru/intensive/htmlcss)">
-              <img src="http://placehold.it/20x30" width="20" height="30"
-                   alt="Логотип Академии">
+              <img src="http://placehold.it/20x30" width="20" height="30" alt="">
             </a>
           </div>
         </div>
