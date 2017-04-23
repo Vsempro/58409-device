@@ -1,9 +1,290 @@
 body {
+  min-width: 1440px;
+  min-height: 1750px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   font-size: 15px;
   line-height: 2;
   color: #464646;
   font-weight: normal;
   font-family: "OpenSans", "Arial", sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  width: 1220px;
+  margin: 0 auto;
+  height: 300px;
+  margin-top: 40px;
+  background-color: gray;
+}
+
+.catalog {
+  height: 187px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: yellow;
+}
+
+.header-logo {
+  margin-top: -30px;
+  margin-left: 80px;
+}
+
+.index-content-header {
+  margin-bottom: 20px;
+  min-height: 50px;
+  background-color: green;
+}
+
+.search-form {
+  float: left;
+  width: 185px;
+  min-height: 50px;
+  margin-left: 65px;
+  background-color: white;
+}
+
+.header-identification {
+  float: left;
+  width: 100px;
+  min-height: 50px;
+  margin-left: 360px;
+  background-color: white;
+}
+
+.login {
+  width: 240px;
+}
+
+.header-setting {
+  float: right;
+  width: 310px;
+  min-height: 50px;
+  background-color: white;
+}
+
+.navigation {
+  margin-bottom: 20px;
+  min-height: 50px;
+  background-color: green;
+}
+
+.slider {
+  width: 1200px;
+  margin-bottom: 80px;
+  background-color: blue;
+}
+
+.slider-image {
+  float: left;
+  width: 500px;
+  height: 400px;
+  background-color: red;
+}
+
+.slider-img {
+  margin-top: -110px;
+  margin-left: 108px;
+}
+
+.slider-content {
+  float: right;
+  width: 630px;
+  height: 400px;
+  background-color: red;
+}
+
+.goods-navigation {
+  width: 1200px;
+  height: 250px;
+  margin-bottom: 10px;
+  background-color: gray;
+}
+
+.advantages {
+  width: 1200px;
+  height: 450px;
+  margin-bottom: 10px;
+  background-color: green;
+}
+
+.partners {
+  width: 1200px;
+  height: 250px;
+  margin-bottom: 10px;
+  background-color: red;
+}
+
+.index-content-main {
+  width: 1200px;
+  min-height: 650px;
+  background-color: green;
+}
+
+.about-us {
+  float: left;
+  width: 500px;
+  min-height: 650px;
+  background-color: gray;
+}
+
+.contacts {
+  float: right;
+  width: 600px;
+  min-height: 650px;
+  background-color: gray;
+}
+
+.main-footer {
+  width: 100%;
+  min-height: 325px;
+  margin-top: 20px;
+  padding: 1px;
+  background-color: red;
+}
+
+.index-content-footer {
+
+  min-height: 55px;
+  background-color: green;
+}
+
+.top {
+  margin-top: 55px;
+}
+
+.middle {
+  margin-top: 10px;
+}
+
+.bottom {
+  margin-top: 37px;
+}
+
+.footer-logo {
+  float: left;
+  width: 200px;
+  min-height: 55px;
+  background-color: white;
+}
+
+.footer-identificanion {
+  float: left;
+  margin-left: 645px;
+  width: 100px;
+  min-height: 55px;
+  background-color: white;
+}
+
+.footer-setting {
+  float: right;
+  width: 250px;
+  min-height: 55px;
+  background-color: white;
+}
+
+.footer-left {
+  float: left;
+  width: 250px;
+  background-color: white;
+}
+
+.footer-navigation {
+  float: left;
+  margin-left: 95px;
+  width: 520px;
+  min-height: 55px;
+  background-color: white;
+}
+
+.footer-right {
+  float: right;
+  width: 220px;
+  background-color: white;
+}
+
+.social {
+  float: left;
+  width: 250px;
+  margin-left: 475px;
+  min-height: 55px;
+  background-color: white;
+}
+
+.copyright {
+float: right;
+width: 70px;
+min-height: 55px;
+background-color: white;
+}
+
+.breadcrumbs {
+  margin-top: -15px;
+  margin-bottom: 40px;
+  min-height: 30px;
+  background-color: red;
+}
+
+.main-catalog {
+  width: 100%;
+  min-height: 1250px;
+  background-color: gray;
+}
+
+.filter {
+  float: left;
+  width: 470px;
+  min-height: 1265px;
+  background-color: blue;
+}
+
+.sorting {
+  float: right;
+  width: 925px;
+  min-height: 75px;
+  background-color: red;
+}
+
+.goods {
+  display: inline-block;
+  margin-left: 45px;
+  margin-top: 45px;
+  width: 810px;
+  min-height: 1145px;
+  background-color: green;
+}
+
+.goods-item {
+  display: inline-block;
+  margin: 20px;
+  width: 360px;
+  min-height: 460px;
+  background-color: yellow;
+}
+
+.goods-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.pagination {
+  width: 765px;
+  height: 70px;
+  margin-top: 25px;
+  margin-left: 25px;
+  background-color: orange;
 }
 
 h1, h2 {

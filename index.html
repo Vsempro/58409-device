@@ -8,21 +8,24 @@
   <body>
     <header class="main-header">
       <div class="container">
-        <img class=header-logo src="img/logoDevice.png" width="164" height="36"
-               alt="">
-        <form class="search-form" action="#" method="get">
-          <input type="text" name="search">
-          <input type="submit" value="Поиск по сайту">
-        </form>
-        <div class="identification header-identificanion">
-          <a href="#">Войти</a>
+        <div class="logo">
+          <img class="header-logo" src="img/logoDevice.png" width="164" height="36" alt="">
         </div>
-        <div class="setting">
-          <a href="#">Сравнить</a>
-          <a href="#">Корзина</a>
+        <div class="index-content-header clearfix">
+          <form class="search-form" action="#" method="get">
+            <input type="text" name="search">
+            <input type="submit" value="Поиск по сайту">
+          </form>
+          <div class="header-identification">
+            <a href="#">Войти</a>
+          </div>
+          <div class="header-setting">
+            <a href="#">Сравнить</a>
+            <a href="#">Корзина</a>
+          </div>
         </div>
-        <nav class="navigation main-navigation">
-          <ul>
+        <nav class="navigation">
+<!--          <ul>
             <li><a href="#">Каталог товаров</a>
               <ul>
                 <li>
@@ -54,44 +57,37 @@
             <li>
               <a href="#">Контакты</a>
             </li>
-          </ul>
+          </ul>-->
         </nav>
       </div>
     </header>
     <main class="container">
-      <section class="slider">
-        <figure class="slider-image">
-          <img src="img/monopod.png" width="384" height="486"
+      <section class="slider clearfix">
+        <div class="slider-image">
+          <img class="slider-img" src="img/monopod.png" width="384" height="486"
                alt="Монопод">
-        </figure>
+        </div>
         <div class="slider-content">
           <h1>Делай селфи, как Бен Стиллер</h1>
           <p>Самая длинная палка для селфи доступна в нашем магазине.
              Восемь (Восемь, Карл!) метров и весом всего 5 килограмм.
           </p>
           <a class="mark" href="#">Подробнее</a>
-          <form class="slider" action="#" method="get">
+          <div class="switch">
             <input type="radio" name="slide" value="slide1" checked>
             <input type="radio" name="slide" value="slide2">
             <input type="radio" name="slide" value="slide3">
-          </form>
+          </div>
           <div class="more">
-            <div class="more-item">
-              <b class="more-value">8,5 м</b>
-              <p>Длина палки</p>
-            </div>
-            <div class="more-item">
-              <b class="more-value">5 кг</b>
-              <p>Вес палки</p>
-            </div>
-            <div class="more-item">
-              <b class="more-value">Карбон</b>
-              <p>Материал</p>
-            </div>
+              <p>
+                <span class="more-value">8,5 м</span><span>Длина палки</span>
+                <span class="more-value">5 кг</span><span>Вес палки</span>
+                <span class="more-value">Карбон</span><span>Материал</span>
+              </p>
           </div>
         </div>
       </section>
-      <div class="goods-item">
+      <div class="goods-navigation">
         <a href="#">
           Виртуальная реальность
         </a>
@@ -124,14 +120,16 @@
           <dt>Кредит</dt>
             <dd>Про кредит</dd>
           </dl>
-          <div class="partners">
-            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
-            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
-            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
-            <img src="http://placehold.it/260x100" width="260" height="100" alt="">
-          </div>
       </div>
-      <div class="index-content">
+      <div class="partners">
+        <div class="partners">
+          <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+          <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+          <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+          <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+        </div>
+      </div>
+      <div class="index-content-main clearfix">
         <div class="about-us">
           <h2>О нас</h2>
           <p>
@@ -163,36 +161,42 @@
     </main>
     <footer class="main-footer">
       <div class="container">
-        <a class="footer-logo" href="index.html">
-          <img src="img/logofooterDevice.png" width="163" height="36"
-                 alt="">
-        </a>
-        <div class="identification footer-identificanion">
-          <a href="#">Войти</a>
-        </div>
-        <div class="setting">
-          <a href="#">Сравнить</a>
-          <a href="#">Корзина</a>
-        </div>
-        <p class="footer">г. Москва, ул. Строителей, 15</p>
-        <nav class="navigation footer-navigation">
-          <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-        <p class="footer">Тел.:+7(495)495-95-95</p>
-        <div class="social">
-          <a class="social-btn social-btn-vk" href="#">ВКонтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фесйбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        </div>
-        <div class="copyright">
-          <a href="(https://htmlacademy.ru/intensive/htmlcss)">
-            <img src="http://placehold.it/20x30" width="20" height="30" alt="">
+        <div class="index-content-footer top">
+          <a class="footer-logo" href="index.html">
+            <img src="img/logofooterDevice.png" width="163" height="36"
+                   alt="">
           </a>
+          <div class="footer-identificanion">
+            <a href="#">Войти</a>
+          </div>
+          <div class="footer-setting">
+            <a href="#">Сравнить</a>
+            <a href="#">Корзина</a>
+          </div>
         </div>
+        <div class="index-content-footer middle">
+          <p class="footer-left">г. Москва, ул. Строителей, 15</p>
+          <nav class="footer-navigation">
+<!--            <ul>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>-->
+          </nav>
+          <p class="footer-right">Тел.:+7(495)495-95-95</p>
+        </div>
+        <div class="index-content-footer bottom">
+          <div class="social">
+            <a class="social-btn social-btn-vk" href="#">ВКонтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фесйбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          </div>
+          <div class="copyright">
+            <a href="(https://htmlacademy.ru/intensive/htmlcss)">
+              <img src="http://placehold.it/20x30" width="20" height="30" alt="">
+            </a>
+          </div>
+      </div>
       </div>
     </footer>
   </body>

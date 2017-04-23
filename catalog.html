@@ -6,26 +6,30 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header catalog">
       <div class="container">
-        <a href="index.html">
-          <img class=header-logo src="img/logoDevice.png" width="164" height="36"
-               alt="">
-        </a>
-        <form class="search-form" action="#" method="get">
-          <input type="text" name="search">
-          <input type="submit" value="Поиск по сайту">
-        </form>
-        <div class="identification header-identificanion">
-          <a href="#">Валентин Петухов</a>
-          <a href="index.html">Выйти</a>
+        <div class="logo">
+          <a href="index.html">
+            <img class=header-logo src="img/logoDevice.png" width="164" height="36"
+                 alt="">
+          </a>
         </div>
-        <div class="setting">
-          <a href="#">Сравнить</a>
-          <a href="#">Корзина</a>
+        <div class="index-content-header clearfix">
+          <form class="search-form" action="#" method="get">
+            <input type="text" name="search">
+            <input type="submit" value="Поиск по сайту">
+          </form>
+          <div class="header-identification login">
+            <a href="#">Валентин Петухов</a>
+            <a href="index.html">Выйти</a>
+          </div>
+          <div class="header-setting">
+            <a href="#">Сравнить</a>
+            <a href="#">Корзина</a>
+          </div>
         </div>
-        <nav class="navigation main-navigation">
-          <ul>
+        <nav class="navigation">
+<!--          <ul>
             <li><a href="#">Каталог товаров</a>
               <ul>
                 <li>
@@ -57,26 +61,28 @@
             <li>
               <a href="#">Контакты</a>
             </li>
-          </ul>
+          </ul>-->
         </nav>
       </div>
     </header>
-    <main class="container">
-      <h1>Моноподы для селфи</h1>
-      <nav class="breadcrumbs">
-        <ul>
-          <li>
-            <a href="#">Главная</a>
-          </li>
-          <li>
-            <a href="#">Каталог товаров</a>
-          </li>
-          <li>
-            Моноподы для селфи
-          </li>
-        </ul>
-      </nav>
-      <div class="catalog">
+    <main>
+      <div class="container">
+        <h1>Моноподы для селфи</h1>
+        <nav class="breadcrumbs">
+<!--          <ul>
+            <li>
+              <a href="#">Главная</a>
+            </li>
+            <li>
+              <a href="#">Каталог товаров</a>
+            </li>
+            <li>
+              Моноподы для селфи
+            </li>
+          </ul>-->
+        </nav>
+      </div>
+      <div class="main-catalog clearfix">
         <div class="filter">
           <h2 class="font">Фильтр</h2>
           <form class="filter-form" action="#" method="get">
@@ -110,7 +116,7 @@
         </div>
         <div class="sorting">
           <h2 class="font">Сортировка:</h2>
-          <ul>
+<!--          <ul>
             <li>
               По цене
             </li>
@@ -128,73 +134,79 @@
                 По убыванию
               </a>
             </li>
-          </ul>
+          </ul>-->
         </div>
         <div class="goods">
-          <figure class="goods-item">
-            <img src="img/item-1.jpg" width="360" height="380"
-                 alt="Монопод любительский">
-            <figcaption>Любительская селфи-палка <span>500 руб.</span></figcaption>
-          </figure>
-          <figure class="goods-item">
+          <div class="goods-item">
+              <img src="img/item-1.jpg" width="360" height="380"
+                   alt="Монопод любительский">
+              <p>Любительская селфи-палка <span>500 руб.</span></p>
+          </div>
+          <div class="goods-item">
             <img src="img/item-2.jpg" width="360" height="380"
                  alt="Монопод профессиональный">
-            <figcaption>Профессиональная селфи-палка <span>1500 руб.</span></figcaption>
-          </figure>
-          <figure class="goods-item">
+            <p>Профессиональная селфи-палка <span>1500 руб.</span></p>
+          </div>
+          <div class="goods-item">
             <img src="img/item-3.jpg" width="360" height="380"
                  alt="Монопод непотопляемый">
-            <figcaption>Непотопляемая селфи-палка <span>2500 руб.</span></figcaption>
-          </figure>
-          <figure class="goods-item">
+            <p>Непотопляемая селфи-палка <span>2500 руб.</span></p>
+          </div>
+          <div class="goods-item">
             <img src="img/item-4.jpg" width="360" height="380"
                  alt="Монопод Следуй за мной">
-            <figcaption>Селфи-палка "Следуй за мной" <span>4900 руб.</span></figcaption>
-          </figure>
-        </div>
-        <div class="pagination">
-          <ul>
-            <li><a>Назад</a></li>
-            <li><a>1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">Вперёд</a></li>
-          </ul>
+            <p>Селфи-палка "Следуй за мной" <span>4900 руб.</span></p>
+          </div>
+          <div class="pagination">
+<!--            <ul>
+              <li><a>Назад</a></li>
+              <li><a>1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">Вперёд</a></li>
+            </ul>-->
+          </div>
         </div>
       </div>
     </main>
     <footer class="main-footer">
       <div class="container">
-        <a class="footer-logo" href="index.html">
-          <img src="img/logofooterDevice.png" width="163" height="36"
-                 alt="">
-        </a>
-        <div class="identification footer-identificanion">
-          <a href="#">Войти</a>
-        </div>
-        <div class="setting">
-          <a href="#">Сравнить</a>
-          <a href="#">Корзина</a>
-        </div>
-        <p class="footer">г. Москва, ул. Строителей, 15</p>
-        <nav class="navigation footer-navigation">
-          <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-        <p class="footer">Тел.:+7(495)495-95-95</p>
-        <div class="social">
-          <a class="social-btn social-btn-vk" href="#">ВКонтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фесйбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        </div>
-        <div class="copyright">
-          <a href="(https://htmlacademy.ru/intensive/htmlcss)">
-            <img src="http://placehold.it/20x30" width="20" height="30" alt="">
+        <div class="index-content-footer top">
+          <a class="footer-logo" href="index.html">
+            <img src="img/logofooterDevice.png" width="163" height="36"
+                   alt="">
           </a>
+          <div class="footer-identificanion">
+            <a href="#">Выйти</a>
+          </div>
+          <div class="footer-setting">
+            <a href="#">Сравнить</a>
+            <a href="#">Корзина</a>
+          </div>
         </div>
+        <div class="index-content-footer middle">
+          <p class="footer-left">г. Москва, ул. Строителей, 15</p>
+          <nav class="footer-navigation">
+<!--            <ul>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>-->
+          </nav>
+          <p class="footer-right">Тел.:+7(495)495-95-95</p>
+        </div>
+        <div class="index-content-footer bottom">
+          <div class="social">
+            <a class="social-btn social-btn-vk" href="#">ВКонтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фесйбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          </div>
+          <div class="copyright">
+            <a href="(https://htmlacademy.ru/intensive/htmlcss)">
+              <img src="http://placehold.it/20x30" width="20" height="30" alt="">
+            </a>
+          </div>
+      </div>
       </div>
     </footer>
   </body>
