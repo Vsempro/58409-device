@@ -1,6 +1,5 @@
 body {
   min-width: 1440px;
-  min-height: 1750px;
   margin: 0;
   padding: 0;
 }
@@ -10,7 +9,8 @@ body {
   line-height: 2;
   color: #464646;
   font-weight: normal;
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: OpenSans, Arial, sans-serif;
+  background-color: white;
 }
 
 .clearfix::after {
@@ -22,13 +22,13 @@ body {
 .main-header {
   width: 1220px;
   margin: 0 auto;
-  height: 300px;
+  height: 160px;
   margin-top: 40px;
   background-color: gray;
 }
 
 .catalog {
-  height: 187px;
+  min-height: 187px;
 }
 
 .container {
@@ -65,7 +65,7 @@ body {
   background-color: white;
 }
 
-.login {
+.user {
   width: 240px;
 }
 
@@ -83,54 +83,214 @@ body {
 }
 
 .slider {
-  width: 1200px;
-  margin-bottom: 80px;
+    position: relative;
+    width: 1155px;
+    height: 560px;
+    margin-left: 140px;
+}
+
+.slider input[type=radio] {
+  display: none;
+}
+
+.slider__inner {
+  min-width: 1150px;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.slider__slides {
+  width: 300%;
+}
+
+.slider__slides .slide1,
+.slider__slides .slide2,
+.slider__slides .slide3 {
+    float: left;
+    width: 1150px;
+    height: 560px;
+}
+
+.slider__slides .slide1 {
+  background-color: green;
+}
+
+.slider__slides img {
+  margin-left: 90px;
+  width: 384px;
+  height: 486px;
+}
+
+.slider__content {
+  float: right;
+  width: 630px;
+  background-color: gray;
+}
+
+.slider__content h1 {
+  margin-left: 50px;
+}
+
+.slider__content p {
+  font-size: 15px;
+  line-height: 2;
+  margin-left: 50px;
+}
+
+.more {
   background-color: blue;
 }
 
-.slider-image {
+.more .more-item:first-child {
   float: left;
-  width: 500px;
-  height: 400px;
-  background-color: red;
 }
 
-.slider-img {
-  margin-top: -110px;
-  margin-left: 108px;
+.more .more-item:nth-child(2) {
+  float: left;
+  margin-left: 100px;
 }
 
-.slider-content {
+.more .more-item:last-child {
   float: right;
-  width: 630px;
-  height: 400px;
+  margin-right: 50px;
+}
+
+.slider__slides .slide2 {
   background-color: red;
+}
+
+.slider__slides .slide3 {
+  background-color: blue;
+}
+
+.slide__index {
+  margin-top: 40px;
+  background-color: yellow;
+}
+
+.slide__index a {
+  float: left;
+  margin-left: 50px;
+}
+
+.slider__controls {
+    float: right;
+    margin-right: 80px;
+    text-align: center;
+}
+
+.slider__controls label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: #cccccc;
+}
+
+#btn-1:checked ~ .slider__controls label[for="btn-1"] {
+  background-color: #666666;
+}
+
+#btn-2:checked ~ .slider__controls label[for="btn-2"] {
+  background-color: #666666;
+}
+
+#btn-3:checked ~ .slider__controls label[for="btn-3"] {
+  background-color: #666666;
+}
+
+#btn-1:checked ~ .slider__inner .slider__slides {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider__inner .slider__slides {
+  transform: translate(-1150px);
+}
+
+#btn-3:checked ~ .slider__inner .slider__slides {
+  transform: translate(-2300px);
 }
 
 .goods-navigation {
-  width: 1200px;
-  height: 250px;
-  margin-bottom: 10px;
+  height: 300px;
+  margin-bottom: 20px;
   background-color: gray;
 }
 
 .advantages {
+  position: relative;
   width: 1200px;
-  height: 450px;
-  margin-bottom: 10px;
+  height: 430px;
+  margin-bottom: 20px;
   background-color: green;
 }
 
+
+.tab__list {
+  overflow: hidden;
+  width: 1200px;
+  height: 430px;
+}
+
+.tab__title{
+        position: absolute;
+        cursor: pointer;
+        left: 20px;
+        width: 290px;
+        height: 40px;
+        text-align: center;
+}
+
+.title1{
+        top: 130px;
+        background-color: yellow;
+}
+
+.title2{
+        top: 195px;
+        background-color: blue;
+}
+
+.title3{
+        top: 260px;
+        background-color: red;
+}
+
+.tab__content {
+  margin-left: auto;
+  width: 890px;
+  height: 430px;
+  padding: 21px 0;
+
+}
+
+.tab__content_tab1 {
+  background-color: yellow;
+}
+
+.tab__content_tab2 {
+  background-color: blue;
+}
+
+.tab__content_tab3 {
+  background-color: red;
+}
+
+
 .partners {
   width: 1200px;
-  height: 250px;
-  margin-bottom: 10px;
+  height: 220px;
+  margin-bottom: 20px;
   background-color: red;
 }
 
 .index-content-main {
   width: 1200px;
-  min-height: 650px;
+  min-height: 660px;
   background-color: green;
 }
 
@@ -248,7 +408,7 @@ background-color: white;
   float: left;
   width: 470px;
   min-height: 1265px;
-  background-color: blue;
+  background-color: yellow;
 }
 
 .sorting {
@@ -285,6 +445,38 @@ background-color: white;
   margin-top: 25px;
   margin-left: 25px;
   background-color: orange;
+}
+
+.pagination a {
+  display: inline-block;
+  height: 40px;
+  min-width: 20px;
+  padding: 0 8px;
+  background-color: gray;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagination .pagination_prev {
+  margin-right: 190px;
+  padding: 15px 40px;
+}
+
+.pagination .pagination_next {
+  margin-left: 190px;
+  padding: 15px 40px;
+}
+
+.pagination .pagination_current {
+  background-color: #16a085;
+}
+
+.pagination .pagination_disabled {
+  opacity: 0.3;
 }
 
 h1, h2 {
