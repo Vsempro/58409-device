@@ -6,35 +6,40 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header catalog">
+    <header class="header">
       <div class="container">
         <a href="index.html">
-          <img class=header-logo src="img/logoDevice.png" width="164" height="36"
-                 alt="">
+          <img class="header__logo" src="img/logoDevice.png" width="164" height="36" alt="">
         </a>
-        <div class="index-content-header clearfix">
-          <form class="search-form" action="#" method="get">
-            <input  class="search-form__input" type="text" name="search">
-            <input  class="search-form__button" type="submit" value="Поиск по сайту">
+        <div class="header__setting clearfix">
+          <form class="header__search-form" action="#" method="get">
+            <input class="search-form__input" type="text" name="search">
+            <input class="search-form__button" type="submit" value="Поиск по сайту">
           </form>
-          <div class="header-identification user">
-            <a class="header-identification__user" href="#">Валентин Петухов</a>
-            <a class="header-identification__output" href="index.html">Выйти</a>
-          </div>
-          <div class="header-setting">
-            <a class="header-setting__comparison" href="#">Сравнить</a>
-            <a class="header-setting__basket" href="#">Корзина</a>
+          <div class="header__items clearfix">
+            <div class="header__login catalog">
+              <a href="#">Валентин Петухов</a>
+            </div>
+            <div class="header__user">
+              <a href="#">Выйти</a>
+            </div>
+            <div class="header__comparison">
+              <a href="#">Сравнить</a>
+            </div>
+            <div class="header__basket">
+              <a href="#">Корзина</a>
+            </div>
           </div>
         </div>
-        <nav class="navigation">
-          <ul class="navigation__departments">
+        <nav class="navigation__departments">
+          <ul>
             <li><a href="#">Каталог товаров</a>
               <ul class="navigation__goods">
                 <li>
                   <a href="#">Виртуальная реальность</a>
                 </li>
                 <li>
-                  Моноподы для селфи
+                  <a href="catalog.html">Моноподы для селфи</a>
                 </li>
                 <li>
                   <a href="#">Экшн-камеры</a>
@@ -65,7 +70,7 @@
     </header>
     <main>
       <div class="container">
-        <h1>Моноподы для селфи</h1>
+        <h1 class="main__title">Моноподы для селфи</h1>
         <div class="breadcrumbs">
               <a href="#">Главная</a>
               <a href="#">Каталог товаров</a>
@@ -74,9 +79,12 @@
       </div>
       <div class="main-catalog clearfix">
         <div class="filter">
-          <h2 class="font">Фильтр</h2>
-          <form class="filter-form" action="#" method="get">
-            <fieldset>
+          <div class="filter__title">
+            <h2>Фильтр:</h2>
+          </div>
+
+          <form class="filter__form" action="#" method="get">
+            <fieldset class="form__cost">
               <legend>Стоимость</legend>
               <div class="slider-range" id="slider">
                 <div class="circle static"></div>
@@ -98,51 +106,66 @@
               <p><label><input type="radio" name="bluetooth" value="1" checked> Есть</label></p>
               <p><label></label><input type="radio" name="bluetooth" value="0"> Нет</p>
             </fieldset>
-            <input type="submit" value="Показать">
+            <button class="form__button" type="submit">Показать</button>
           </form>
         </div>
-        <div class="sorting">
-          <h2 class="font">Сортировка:</h2>
-          <ul class="sorting__item">
-            <li>
-              По цене
-            </li>
-            <li>
-              <a href="#">По типу</a>
-            </li>
-            <li>
-              <a href="#">По популярности</a>
-            </li>
-            <li>
-                <a class="sorting-icon sorting-icon-up">По возрастанию</a>
-            </li>
-            <li>
-              <a class="sorting-icon sorting-icon-down active" href="#">
-                По убыванию
-              </a>
-            </li>
-          </ul>
+        <div class="sorting clearfix">
+          <div class="sorting__title">
+            <h2>Сортировка:</h2>
+          </div>
+          <div class="sorting__item">
+            <ul>
+              <li class="sorting__item_active">
+                <a>По цене</a>
+              </li>
+              <li>
+                <a href="#">По типу</a>
+              </li>
+              <li>
+                <a href="#">По популярности</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sorting__indicator">
+            <a class="sorting__button sorting__button_up">
+              По возрастанию
+            </a>
+            <a class="sorting__button sorting__button_down sorting__button_active" href="#">
+              По убыванию
+            </a>
+          </div>
         </div>
-        <div class="goods">
+        <div class="goods clearfix">
           <article class="goods-item">
-              <img src="img/item-1.jpg" width="360" height="380"
-                   alt="Монопод любительский">
-              <p>Любительская селфи-палка <span>500 руб.</span></p>
+            <img src="img/item-1.jpg" width="360" height="380"
+                 alt="Монопод любительский">
+            <div class="goods__footer1">
+              <h3>Любительская селфи-палка</h3>
+              <p>500 руб.</p>
+            </div>
           </article>
           <article class="goods-item">
             <img src="img/item-2.jpg" width="360" height="380"
                  alt="Монопод профессиональный">
-            <p>Профессиональная селфи-палка <span>1500 руб.</span></p>
+            <div class="goods__footer2">
+              <h3>Профессиональная селфи-палка</h3>
+              <p>1500 руб.</p>
           </article>
           <article class="goods-item">
             <img src="img/item-3.jpg" width="360" height="380"
                  alt="Монопод непотопляемый">
-            <p>Непотопляемая селфи-палка <span>2500 руб.</span></p>
+            <div class="goods__footer3">
+              <h3>Непотопляемая селфи-палка</h3>
+              <p>2500 руб.</p>
+            </div>
           </article>
           <article class="goods-item">
             <img src="img/item-4.jpg" width="360" height="380"
                  alt="Монопод Следуй за мной">
-            <p>Селфи-палка "Следуй за мной" <span>4900 руб.</span></p>
+            <div class="goods__footer4">
+              <h3>Селфи-палка "Следуй за мной"</h3>
+              <p>4900 руб.</p>
+            </div>
           </article>
           <div class="pagination">
             <a class="pagination_prev pagination_disabled">Назад</a>
@@ -156,23 +179,27 @@
     </main>
     <footer class="main-footer">
       <div class="container">
-        <div class="index-content-footer top">
+        <div class="index-content-footer top clearfix">
           <a class="footer-logo" href="index.html">
             <img src="img/logofooterDevice.png" width="163" height="36"
                    alt="">
           </a>
-          <div class="footer-identificanion">
-            <a class="header-identification__user" href="#">Выйти</a>
-          </div>
-          <div class="footer-setting">
-            <a class="header-setting__comparison" href="#">Сравнить</a>
-            <a class="header-setting__basket" href="#">Корзина</a>
+          <div class="footer__setting">
+            <div class="footer__login">
+              <a href="#">Войти</a>
+            </div>
+            <div class="footer__comparison">
+              <a href="#">Сравнить</a>
+            </div>
+            <div class="footer__basket">
+              <a href="#">Корзина</a>
+            </div>
           </div>
         </div>
-        <div class="index-content-footer middle">
+        <div class="index-content-footer middle clearfix">
           <p class="footer-left">г. Москва, ул. Строителей, 15</p>
           <nav class="footer-navigation">
-            <ul class="navigation__departments">
+            <ul class="navigation__departments navigation__departments__footer">
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Гарантия</a></li>
               <li><a href="#">Контакты</a></li>
@@ -180,19 +207,19 @@
           </nav>
           <p class="footer-right">Тел.:+7(495)495-95-95</p>
         </div>
-        <div class="index-content-footer bottom">
+        <div class="index-content-footer bottom clearfix">
           <div class="social">
-            <a class="social-btn social-btn-vk" href="#">ВКонтакте</a>
-            <a class="social-btn social-btn-fb" href="#">Фесйбук</a>
-            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+            <a class="social__btn social__btn_fb" href="#">ВКонтакте</a>
+            <a class="social__btn social__btn_inst" href="#">Фесйбук</a>
+            <a class="social__btn social__btn_tw" href="#">Инстаграм</a>
           </div>
           <div class="copyright">
             <a href="(https://htmlacademy.ru/intensive/htmlcss)">
-              <img src="http://placehold.it/20x30" width="20" height="30" alt="">
+              <img src="img/htmlacademy.png" width="27" height="34" alt="">
             </a>
           </div>
       </div>
-      </div>
+    </div>
     </footer>
   </body>
 </html>

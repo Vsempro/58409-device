@@ -3,29 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин гаджетов "Девайс"</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/gilroyextrabold.woff2">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="header">
       <div class="container">
-        <div class="logo">
-          <img class="header-logo" src="img/logoDevice.png" width="164" height="36" alt="">
-        </div>
-        <div class="index-content-header clearfix">
-          <form class="search-form" action="#" method="get">
+        <a>
+          <img class="header__logo" src="img/logoDevice.png" width="164" height="36" alt="">
+        </a>
+        <div class="header__setting clearfix">
+          <form class="header__search-form" action="#" method="get">
             <input class="search-form__input" type="text" name="search">
             <input class="search-form__button" type="submit" value="Поиск по сайту">
           </form>
-          <div class="header-identification">
-            <a class="header-identification__login" href="#">Войти</a>
-          </div>
-          <div class="header-setting">
-            <a class="header-setting__comparison" href="#">Сравнить</a>
-            <a class="header-setting__basket" href="#">Корзина</a>
+          <div class="header__items clearfix">
+            <div class="header__login">
+              <a href="#">Войти</a>
+            </div>
+            <div class="header__comparison">
+              <a href="#">Сравнить</a>
+            </div>
+            <div class="header__basket">
+              <a href="#">Корзина</a>
+            </div>
           </div>
         </div>
-        <nav class="navigation">
-          <ul class="navigation__departments">
+        <nav class="navigation__departments">
+          <ul>
             <li><a href="#">Каталог товаров</a>
               <ul class="navigation__goods">
                 <li>
@@ -65,23 +72,25 @@
       <input type="radio" id="btn-1" name="toggle" checked>
       <input type="radio" id="btn-2" name="toggle">
       <input type="radio" id="btn-3" name="toggle">
+      <div class="slider__controls">
+        <label for="btn-1"></label>
+        <label for="btn-2"></label>
+        <label for="btn-3"></label>
+      </div>
       <div class="slider__inner">
         <div class="slider__slides">
           <div class="slide1">
             <img src="img/monopod.png" width="384" height="486" alt="page1">
             <div class="slider__content">
+
               <h1>Делай селфи,<br>
                   как Бен Стиллер!</h1>
-              <p>Самая длинная палка для селфи доступна в нашем магазине.
+              <p>Самая длинная палка для селфи доступна в нашем магазине.<br>
                  Восемь (Восемь, Карл!) метров и весом всего 5 килограмм.
               </p>
               <div class="slide__index clearfix">
                 <a class="mark" href="#">Подробнее</a>
-                <div class="slider__controls">
-                  <label for="btn-1"></label>
-                  <label for="btn-2"></label>
-                  <label for="btn-3"></label>
-                </div>
+
               </div>
               <div class="more clearfix">
                 <div class="more-item">
@@ -109,11 +118,6 @@
               </p>
               <div class="slide__index clearfix">
                 <a class="mark" href="#">Подробнее</a>
-                <div class="slider__controls">
-                  <label for="btn-1"></label>
-                  <label for="btn-2"></label>
-                  <label for="btn-3"></label>
-                </div>
               </div>
               <div class="more clearfix">
                 <div class="more-item">
@@ -141,11 +145,6 @@
               </p>
               <div class="slide__index clearfix">
                 <a class="mark" href="#">Подробнее</a>
-                <div class="slider__controls">
-                  <label for="btn-1"></label>
-                  <label for="btn-2"></label>
-                  <label for="btn-3"></label>
-                </div>
               </div>
               <div class="more clearfix">
                 <div class="more-item">
@@ -167,33 +166,45 @@
       </div>
     </section>
     <main class="container">
-      <div class="goods-navigation">
-        <a class="goods-navigation__item" href="#">
-          Виртуальная реальность
-        </a>
-        <a  class="goods-navigation__item" href="catalog.html">
-          Моноподы для селфи
-        </a>
-        <a  class="goods-navigation__item" href="#">
-          Экшн-камеры
-        </a>
-        <a  class="goods-navigation__item" href="#">
-          Фитнес-браслеты
-        </a>
-        <a  class="goods-navigation__item" href="#">
-          Умные часы
-        </a>
-        <a  class="goods-navigation__item" href="#">
-          Квадрокоптеры
-        </a>
+      <div class="goods-navigation clearfix">
+        <div class="card">
+          <a class="goods-navigation__item" href="#">
+            Виртуальная реальность
+          </a>
+        </div>
+        <div class="card">
+          <a  class="goods-navigation__item" href="catalog.html">
+            Моноподы для селфи
+          </a>
+        </div>
+        <div class="card">
+          <a  class="goods-navigation__item" href="#">
+            Экшн-камеры
+          </a>
+        </div>
+        <div class="card">
+          <a  class="goods-navigation__item" href="#">
+            Фитнес-браслеты
+          </a>
+        </div>
+        <div class="card">
+          <a  class="goods-navigation__item" href="#">
+            Умные часы
+          </a>
+        </div>
+        <div class="card">
+          <a  class="goods-navigation__item" href="#">
+            Квадрокоптеры
+          </a>
+        </div>
       </div>
       <div class="advantages">
         <dl class="tab__list">
           <dt class="tab__title title1"><a href="#tab1">Доставка</a></dt>
             <dd class="tab__content tab__content_tab1" id="tab1">
               <h2>Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему
-                 подъезду совершенно бесплатно! Ведь мы неплохо
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему<br>
+                 подъезду совершенно бесплатно! Ведь мы неплохо<br>
                  заработаем, поднимая его на ваш этаж.</p>
             </dd>
           <dt class="tab__title title2"><a href="#tab2">Гарантия</a></dt>
@@ -202,11 +213,27 @@
             <dd class="tab__content tab__content_tab3" id="tab3">Про кредит</dd>
           </dl>
       </div>
-      <div class="partners">
-        <img src="http://placehold.it/260x100" width="260" height="100" alt="">
-        <img src="http://placehold.it/260x100" width="260" height="100" alt="">
-        <img src="http://placehold.it/260x100" width="260" height="100" alt="">
-        <img src="http://placehold.it/260x100" width="260" height="100" alt="">
+      <div class="partners clearfix">
+        <div class="partners__item">
+          <a>
+            <img src="img/logo-1.png" width="260" height="100" alt="">
+          </a>
+        </div>
+        <div class="partners__item">
+          <a>
+            <img src="img/logo-2.png" width="260" height="100" alt="">
+          </a>
+        </div>
+        <div class="partners__item">
+          <a>
+            <img src="img/logo-3.png" width="260" height="100" alt="">
+          </a>
+        </div>
+        <div class="partners__item">
+          <a>
+            <img src="img/logo-4.png" width="260" height="100" alt="">
+          </a>
+        </div>
       </div>
       <div class="index-content-main clearfix">
         <div class="about-us">
@@ -232,31 +259,35 @@
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
             проверить работоспособность покупки. Всякое бывает.
           </p>
-          <a href="#"><img src="img/map.png" width="560"
+          <a class="map" href="#"><img src="img/map.png" width="560"
              height="222" alt="Месторасположение фирмы на карте: ул. Строителей, д.15"></a>
-          <a class="mark" href="#">Напишите нам</a>
+          <a class="btn" class="mark" href="#">Напишите нам</a>
         </div>
       </div>
     </main>
     <footer class="main-footer">
       <div class="container">
-        <div class="index-content-footer top">
+        <div class="index-content-footer top clearfix">
           <a class="footer-logo" href="index.html">
             <img src="img/logofooterDevice.png" width="163" height="36"
                    alt="">
           </a>
-          <div class="footer-identificanion">
-            <a class="header-identification__login" href="#">Войти</a>
-          </div>
-          <div class="footer-setting">
-            <a class="header-setting__comparison" href="#">Сравнить</a>
-            <a class="header-setting__basket" href="#">Корзина</a>
+          <div class="footer__setting">
+            <div class="footer__login">
+              <a href="#">Войти</a>
+            </div>
+            <div class="footer__comparison">
+              <a href="#">Сравнить</a>
+            </div>
+            <div class="footer__basket">
+              <a href="#">Корзина</a>
+            </div>
           </div>
         </div>
-        <div class="index-content-footer middle">
+        <div class="index-content-footer middle clearfix">
           <p class="footer-left">г. Москва, ул. Строителей, 15</p>
           <nav class="footer-navigation">
-            <ul class="navigation__departments">
+            <ul class="navigation__departments navigation__departments__footer">
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Гарантия</a></li>
               <li><a href="#">Контакты</a></li>
@@ -264,19 +295,19 @@
           </nav>
           <p class="footer-right">Тел.:+7(495)495-95-95</p>
         </div>
-        <div class="index-content-footer bottom">
+        <div class="index-content-footer bottom clearfix">
           <div class="social">
-            <a class="social__btn social__btn_vk" href="#">ВКонтакте</a>
-            <a class="social__btn social__btn_fb" href="#">Фесйбук</a>
-            <a class="social__btn social__btn_inst" href="#">Инстаграм</a>
+            <a class="social__btn social__btn_fb" href="#">ВКонтакте</a>
+            <a class="social__btn social__btn_inst" href="#">Фесйбук</a>
+            <a class="social__btn social__btn_tw" href="#">Инстаграм</a>
           </div>
           <div class="copyright">
             <a href="(https://htmlacademy.ru/intensive/htmlcss)">
-              <img src="http://placehold.it/20x30" width="20" height="30" alt="">
+              <img src="img/htmlacademy.png" width="27" height="34" alt="">
             </a>
           </div>
       </div>
-      </div>
+    </div>
     </footer>
   </body>
 </html>
