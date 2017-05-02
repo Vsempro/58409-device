@@ -1,4 +1,4 @@
-@@font-face {
+@font-face {
   font-family: Gilroy;
   src: url("../fonts/gilroyextrabold.woff2") format("woff2");
   font-weight: bold;
@@ -67,6 +67,56 @@ body {
   float: left;
   min-height: 50px;
   margin-left: 50px;
+}
+
+.header__search-form input[type="search"] {
+  width: 440px;
+  margin: 0;
+  padding: 15px 10px;
+  padding-left: 40px;
+  font-size: 15px;
+  font-family: OpenSans, Arial, sans-serif;
+  color: black;
+  opacity: 0.3;
+  border: none;
+  background: url("../img/search.png") no-repeat 0 17px;
+  background-color: #f7e296;
+}
+
+.header__search-form input[type="search"]:hover {
+  opacity: 0.6;
+}
+
+.header__search-form input:focus {
+
+}
+
+.headerForm__button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  font-family: OpenSans, Arial, sans-serif;
+  color: black;
+  vertical-align: bottom;
+  background-color: #f7e296;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.headerForm__button::after {
+  content: "";
+  position: absolute;
+  width: 445px;
+  height: 2px;
+  background-color: black;
+  top: 47px;
+  right: 85px;
+}
+
+.headerForm__button {
+  display: none;
 }
 
 .header__items a,
@@ -162,8 +212,50 @@ body {
   vertical-align: top;
 }
 
-.navigation__departments li:first-child {
+.navigation__departments li:hover {
+  opacity: 0.6;
+}
+
+.navigation__departments li:active {
+  opacity: 0.3;
+}
+
+.navigation__catalog {
+  position: relative;
+  padding-right: 30px;
   margin-left: 30px;
+}
+
+.navigation__catalog::before,
+.navigation__catalog::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: black;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.navigation__catalog::before:hover,
+.navigation__catalog::after:hover {
+  opacity: 0.1;
+}
+
+.navigation__catalog::before:active,
+.navigation__catalog::after:active {
+  opacity: 0.2;
+}
+
+.navigation__catalog::before {
+  right: 0;
+  top: 50%;
+}
+
+.navigation__catalog::after {
+  right: 0;
+  top: 50%;
+  transform: rotate(90deg);
 }
 
 .navigation__departments li:nth-child(2) {
@@ -926,6 +1018,153 @@ float: right;
   background-color: #dcdcdc;
 }
 
+.cost__controls {
+  position: relative;
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+
+}
+
+.cost__controls .cost__scale {
+  width: 100%;
+  height: 2px;
+  background: #dbdbdb;
+}
+
+.cost__controls .cost__bar {
+  width: 50%;
+  height: 2px;
+  background: #91c92f;
+}
+
+.cost__toggle {
+  position: absolute;
+  top: -7px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cost__toggle_min {
+  left: 0;
+}
+
+.cost__toggle_max {
+  left:50%;
+}
+
+.cost label{
+  color: black;
+  opacity: 0.2;
+}
+
+.cost__min input[type="text"],
+.cost__max input[type="text"]{
+  width: 50px;
+  font-size: 14px;
+  border: none;
+}
+
+.filter__form fieldset {
+  position: relative;
+  border: none;
+}
+
+.filter__form fieldset::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  top: -16px;
+  background-color: black
+}
+
+.form__cost {
+  margin-bottom: 30px;
+}
+
+.color p,
+.form__bluetooth p {
+  line-height: 30px;
+}
+
+.color input[type="checkbox"],
+.form__bluetooth input[type="radio"] {
+  opacity: 0;
+}
+
+.color label,
+.form__bluetooth label {
+  position: relative;
+  padding-top: 5px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.color label::before,
+.form__bluetooth label::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 23px;
+  height: 23px;
+  top: 3px;
+  left: -25px;
+  background-color: #dbdbdb;
+}
+
+.form__bluetooth label::before {
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #dbdbdb;
+}
+
+.color label::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 9px;
+  height: 6px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  left: -20px;
+  top: 7px;
+  transform: rotate(-45deg);
+}
+
+.form__bluetooth label::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 5px;
+  height: 5px;
+  border: 2px solid black;
+  border-radius: 50%;
+  left: -16px;
+  top: 12px;
+}
+
+.color input[type="checkbox"] + label::after,
+.form__bluetooth input[type="radio"] + label::after {
+  content: none;
+}
+
+.color input[type="checkbox"]:checked + label::after,
+.form__bluetooth input[type="radio"]:checked + label::after  {
+  content: "";
+}
+
+.color {
+  margin-bottom: 15px;
+}
+
 .sorting__title {
   display: inline-block;
   float: left;
@@ -971,6 +1210,7 @@ float: right;
 }
 
 .form__button {
+  position: relative;
   display: inline-block;
   padding: 10px 35px;
   font-size: 18px;
@@ -983,10 +1223,21 @@ float: right;
   font-family: "Gilroy", "Arial", sans-serif;
   vertical-align: top;
   text-align: center;
-  background-color: #f0c52e;
+  background-color: white;
   border: none;
   cursor: pointer;
   margin: 15px 10px;
+}
+
+.form__button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 6px;
+  background-color: #f0c52e;
+  top: 18px;
+  left: 0px;
+  1z-index: -1;
 }
 
 .sorting__item {

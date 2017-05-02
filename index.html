@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Магазин гаджетов "Девайс"</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="./fonts/gilroyextrabold.woff2">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -16,8 +15,10 @@
         </a>
         <div class="header__setting clearfix">
           <form class="header__search-form" action="#" method="get">
-            <input class="search-form__input" type="text" name="search">
-            <input class="search-form__button" type="submit" value="Поиск по сайту">
+            <label>
+              <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+            </label>
+            <button class="headerForm__button" type="submit">Найти</button>
           </form>
           <div class="header__items clearfix">
             <div class="header__login">
@@ -33,7 +34,8 @@
         </div>
         <nav class="navigation__departments">
           <ul>
-            <li><a href="#">Каталог товаров</a>
+            <li class="navigation__catalog">
+              <a href="#">Каталог товаров</a>
               <ul class="navigation__goods">
                 <li>
                   <a href="#">Виртуальная реальность</a>

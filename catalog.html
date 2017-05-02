@@ -13,8 +13,10 @@
         </a>
         <div class="header__setting clearfix">
           <form class="header__search-form" action="#" method="get">
-            <input class="search-form__input" type="text" name="search">
-            <input class="search-form__button" type="submit" value="Поиск по сайту">
+            <label>
+              <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+            </label>
+            <button class="headerForm__button" type="submit">Найти</button>
           </form>
           <div class="header__items clearfix">
             <div class="header__login catalog">
@@ -86,25 +88,51 @@
           <form class="filter__form" action="#" method="get">
             <fieldset class="form__cost">
               <legend>Стоимость</legend>
-              <div class="slider-range" id="slider">
-                <div class="circle static"></div>
-                <div class="circle dinamic"></div>
-                <p>от 0</p>
-                <p>до 5000</p>
+              <div class="cost">
+                <div class="cost__controls">
+                  <div class="cost__scale">
+                    <div class="cost__bar"></div>
+                  </div>
+                  <div class="cost__toggle cost__toggle_min"></div>
+                  <div class="cost__toggle cost__toggle_max"></div>
+                </div>
+                <label class="cost__min">от <input type="text" name="minPrice" value="0"></label>
+                <label class="cost__max">до <input type="text" name="maxPrice" value="5000"></label>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="color">
               <legend>Цвет</legend>
-              <p><label><input type="checkbox" id="black" checked>Чёрный</label></p>
-              <p><label><input type="checkbox" id="white">Белый</label></p>
-              <p><label><input type="checkbox" id="blue" checked>Синий</label></p>
-              <p><label><input type="checkbox" id="red" checked>Красный</label></p>
-              <p><label><input type="checkbox" id="pink">Розовый</label></p>
+              <p>
+                <input type="checkbox" id="black" checked>
+                <label for="black">Чёрный</label>
+              </p>
+              <p>
+                <input type="checkbox" id="white">
+                <label for="white">Белый</label>
+              </p>
+              <p>
+                <input type="checkbox" id="blue" checked>
+                <label for="blue">Синий</label>
+              </p>
+              <p>
+                <input type="checkbox" id="red" checked>
+                <label for="red">Красный</label>
+              </p>
+              <p>
+                <input type="checkbox" id="pink">
+                <label for="pink">Розовый</label>
+              </p>
             </fieldset>
-            <fieldset>
+            <fieldset class="form__bluetooth">
               <legend>Bluetooth</legend>
-              <p><label><input type="radio" name="bluetooth" value="1" checked> Есть</label></p>
-              <p><label></label><input type="radio" name="bluetooth" value="0"> Нет</p>
+              <p>
+                <input type="radio" name="bluetooth" value="1" id="yes" checked>
+                <label for="yes">Есть</label>
+              </p>
+              <p>
+                <input type="radio" name="bluetooth" value="0" id="no">
+                <label for="no">Нет</label>
+              </p>
             </fieldset>
             <button class="form__button" type="submit">Показать</button>
           </form>
