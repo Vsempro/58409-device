@@ -87,8 +87,12 @@ body {
   opacity: 0.6;
 }
 
-.header__search-form input:focus {
+.headerForm__button {
+  display: none;
+}
 
+.header__search-form input:focus {
+  1display: block;
 }
 
 .headerForm__button {
@@ -113,10 +117,6 @@ body {
   background-color: black;
   top: 47px;
   right: 85px;
-}
-
-.headerForm__button {
-  display: none;
 }
 
 .header__items a,
@@ -194,14 +194,15 @@ body {
   background: url("../img/Spritecart.png") no-repeat;
 }
 
-.navigation__departments ul {
+.navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
 
-.navigation__departments li {
+.navigation__list > li {
+  position: relative;
   display: inline-block;
   font-size: 18px;
   line-height: auto;
@@ -212,15 +213,15 @@ body {
   vertical-align: top;
 }
 
-.navigation__departments li:hover {
+.navigation__list li:hover {
   opacity: 0.6;
 }
 
-.navigation__departments li:active {
+.navigation__list li:active {
   opacity: 0.3;
 }
 
-.navigation__catalog {
+.navigation__catalog > a {
   position: relative;
   padding-right: 30px;
   margin-left: 30px;
@@ -258,19 +259,19 @@ body {
   transform: rotate(90deg);
 }
 
-.navigation__departments li:nth-child(2) {
+.navigation__list > li:nth-child(2) {
   margin-left: 290px;
 }
 
-.navigation__departments li:nth-child(3) {
+.navigation__list > li:nth-child(3) {
   margin-left: 10px;
 }
 
-.navigation__departments li:last-child {
+.navigation__list > li:last-child {
   margin-left: 80px;
 }
 
-.navigation__departments a {
+.navigation__list a {
   display: block;
   padding-top: 5px;
   padding-left: 20px;
@@ -278,9 +279,48 @@ body {
   text-decoration: none;
 }
 
-.navigation__goods {
+.navigation__list .navigation__goods {
   display: none;
+  position: absolute;
+  left: 30px;
+  top: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fcf8e3;
 }
+
+.navigation__list > li:hover .navigation__goods {
+  display: block;
+}
+
+.navigation__goods {
+  width: 600px;
+  height: 80px;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  font-family: OpenSans, Arial, sans-serif;
+  color: black;
+  text-transform: none;
+}
+
+.navigation__goods li {
+  display: inline-block;
+  font-size: 0;
+}
+
+.navigation__goods a {
+  font-size: 15px;
+  padding-right: 40px;
+  padding-bottom: 0;
+}
+
+.navigation__goods li:nth-child(5) {
+  margin-right: 100px;
+}
+
 
 /* 2 Slider
    2.1. Сетка
