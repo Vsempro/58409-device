@@ -1,14 +1,23 @@
 @font-face {
-  font-family: Gilroy;
-  src: url("../fonts/gilroyextrabold.woff2") format("woff2");
-  font-weight: bold;
+  font-family: "Open Sans";
   font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"),
+       url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  src: local("Open Sans Light"), local("OpenSans-Light"),
+       url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 body {
   min-width: 1440px;
-  margin: 0;
-  padding: 0;
   font-size: 15px;
   line-height: 2;
   letter-spacing: 0.01em;
@@ -69,7 +78,7 @@ body {
   margin-left: 50px;
 }
 
-.header__search-form input[type="search"] {
+.search-form__input {
   width: 440px;
   margin: 0;
   padding: 15px 10px;
@@ -83,16 +92,20 @@ body {
   background-color: #f7e296;
 }
 
-.header__search-form input[type="search"]:hover {
+.search-form__input:hover {
   opacity: 0.6;
 }
 
 .headerForm__button {
-  display: none;
+  opacity: 0;
 }
 
-.header__search-form input:focus {
-  1display: block;
+.search-form__input:focus {
+  outline: none;
+}
+
+.search-form__input:focus ~ .headerForm__button {
+  opacity: 1;
 }
 
 .headerForm__button {
@@ -208,7 +221,7 @@ body {
   line-height: auto;
   font-weight: bold;
   letter-spacing: 0.2em;
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   text-transform: uppercase;
   vertical-align: top;
 }
@@ -371,6 +384,7 @@ body {
 .slider__content p {
   margin: 0;
   padding: 0;
+  max-width: 480px;
   margin-top: 20px;
   margin-left: 70px;
 }
@@ -388,7 +402,7 @@ body {
   line-height: auto;
   font-weight: bold;
   letter-spacing: 0.2em;
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   text-transform: uppercase;
   color: black;
   text-decoration: none;
@@ -435,7 +449,7 @@ body {
 }
 
 .more-value {
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 36px;
   line-height: normal;
   letter-spacing: 0.01em;
@@ -467,14 +481,8 @@ body {
   background-color: blue;
 }
 
-#btn-1:checked ~ .slider__controls label[for="btn-1"] {
-  border: 3px solid black;
-}
-
-#btn-2:checked ~ .slider__controls label[for="btn-2"] {
-  border: 3px solid black;
-}
-
+#btn-1:checked ~ .slider__controls label[for="btn-1"],
+#btn-2:checked ~ .slider__controls label[for="btn-2"],
 #btn-3:checked ~ .slider__controls label[for="btn-3"] {
   border: 3px solid black;
 }
@@ -498,7 +506,7 @@ body {
   margin-bottom: 130px;
 }
 
-.advantages {
+.tab {
   position: relative;
 }
 
@@ -598,7 +606,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
 .tab__list {
@@ -621,22 +629,22 @@ body {
   line-height: auto;
   font-weight: bold;
   letter-spacing: 0.2em;
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   text-transform: uppercase;
   color: black;
   text-decoration: none;
 }
 
-.title1 {
+.tab__title_title1 {
         top: 130px;
 }
 
-.title2 {
+.tab__title_title2 {
         top: 195px;
         background-color: blue;
 }
 
-.title3 {
+.tab__title_title3 {
         top: 260px;
         background-color: red;
 }
@@ -688,6 +696,7 @@ body {
 .tab__content p {
   margin: 0;
   padding: 0;
+  max-width: 430px;
   margin-top: 20px;
   margin-left: 120px;
 }
@@ -729,7 +738,7 @@ body {
   line-height: auto;
   font-weight: bold;
   letter-spacing: 0.01em;
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
 .about-us a {
@@ -741,7 +750,7 @@ body {
   line-height: auto;
   font-weight: bold;
   letter-spacing: 0.2em;
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   text-transform: uppercase;
   color: black;
   text-decoration: none;
@@ -762,7 +771,7 @@ body {
   line-height: auto;
   font-weight: bold;
   letter-spacing: 0.2em;
-  font-family: Gilroy Arial, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   text-transform: uppercase;
   color: black;
   text-decoration: none;
@@ -892,19 +901,19 @@ float: right;
   color: white;
 }
 
-.navigation__departments__footer li:first-child {
+.navigation__departments_footer li:first-child {
   margin-left: 0px;
 }
 
-.navigation__departments__footer li:nth-child(2) {
+.navigation__departments_footer li:nth-child(2) {
   margin-left: 0px;
 }
 
-.navigation__departments__footer li:last-child {
+.navigation__departments_footer li:last-child {
   margin-left: 0px;
 }
 
-.navigation__departments__footer a {
+.navigation__departments_footer a {
   color: white;
 }
 
@@ -958,7 +967,7 @@ float: right;
   line-height: normal;
   color: black;
   font-weight: bold;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
 /* 5 Bresdcrumbs
@@ -1220,7 +1229,7 @@ float: right;
   text-transform: uppercase;
   color: black;
   font-weight: bold;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
 .filter__title h2 {
@@ -1242,7 +1251,7 @@ float: right;
   letter-spacing: 0.01em;
   color: black;
   font-weight: bold;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
 .form__cost {
@@ -1260,7 +1269,7 @@ float: right;
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   vertical-align: top;
   text-align: center;
   background-color: white;
@@ -1344,7 +1353,7 @@ float: right;
   letter-spacing: 0.01em;
   color: black;
   font-weight: bold;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
 .goods__footer1 h3{
@@ -1373,7 +1382,7 @@ float: right;
   letter-spacing: 0.01em;
   color: #464646;
   font-weight: normal;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
 .pagination a {
@@ -1384,7 +1393,7 @@ float: right;
   letter-spacing: 0.2em;
   color: #464646;
   font-weight: bold;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   min-width: 20px;
   padding: 25px 7px;
   text-align: center;
