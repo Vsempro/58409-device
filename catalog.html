@@ -6,64 +6,56 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <div class="container">
+    <header class="header headerCatalog">
+      <div class="header__container">
         <a href="index.html">
-          <img class="header__logo" src="img/logoDevice.png" width="164" height="36" alt="">
+          <img class="header__logo" src="img/logoDevice.png" width="164" height="36" alt="Логотип Device">
         </a>
         <div class="header__setting clearfix">
-          <form class="header__search-form" action="#" method="get">
-            <label>
-              <input class="search-form__input" type="search" placeholder="Поиск по сайту">
-            </label>
-            <button class="headerForm__button" type="submit">Найти</button>
+          <form class="searchForm" action="#" method="get">
+            <label for="inputId"></label>
+              <input class="searchForm__input" type="search" id="inputId" placeholder="Поиск по сайту">
+              <button class="searchForm__button" type="submit">Найти</button>
           </form>
-          <div class="header__items clearfix">
-            <div class="header__login catalog">
-              <a href="#">Валентин Петухов</a>
-            </div>
-            <div class="header__user">
-              <a href="#">Выйти</a>
-            </div>
-            <div class="header__comparison">
-              <a href="#">Сравнить</a>
-            </div>
-            <div class="header__basket">
-              <a href="#">Корзина</a>
-            </div>
+          <div class="header__items header__items_catalog clearfix">
+            <a  class="header__login header__login_catalog" href="#">Валентин Петухов</a>
+            <a class="header__user header__user_catalog" href="#">Выйти</a>
+            <a class="header__comparison header__comparison_catalog" href="#">Сравнить</a>
+            <a class="header__basket header__basket_catalog" href="#">Корзина</a>
           </div>
         </div>
-        <nav class="navigation__departments">
+        <nav class="navigation__departments navigation__departments_catalog clearfix">
           <ul class="navigation__list">
-            <li><a href="#">Каталог товаров</a>
+            <li class="navigation__catalog">
+              <a class="mainList" href="#">Каталог товаров</a>
               <ul class="navigation__goods">
-                <li>
+                <li class="reality">
                   <a href="#">Виртуальная реальность</a>
                 </li>
-                <li>
-                  <a href="catalog.html">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a href="#">Экшн-камеры</a>
-                </li>
-                <li>
+                <li class="bracelets">
                   <a href="#">Фитнес-браслеты</a>
                 </li>
-                <li>
+                <li class="quadcopters">
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+                <li class="monopods">
+                  <a>Моноподы для селфи</a>
+                </li>
+                <li class="watchs">
                   <a href="#">Умные часы</a>
                 </li>
-                <li>
-                  <a href="#">Квадрокоптеры</a>
+                <li class="camera">
+                  <a href="#">Экшн-камеры</a>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="navigation__shipping">
               <a href="#">Доставка</a>
             </li>
-            <li>
+            <li class="navigation__guarantee">
               <a href="#">Гарантия</a>
             </li>
-            <li>
+            <li class="navigation__contacts">
               <a href="#">Контакты</a>
             </li>
           </ul>
@@ -71,10 +63,10 @@
       </div>
     </header>
     <main>
-      <div class="container">
+      <div class="header__container">
         <h1 class="main__title">Моноподы для селфи</h1>
         <div class="breadcrumbs">
-              <a href="#">Главная</a>
+              <a href="index.html">Главная</a>
               <a href="#">Каталог товаров</a>
               <a class="breadcrumbs__active">Моноподы для селфи</a>
         </div>
@@ -84,7 +76,6 @@
           <div class="filter__title">
             <h2>Фильтр:</h2>
           </div>
-
           <form class="filter__form" action="#" method="get">
             <fieldset class="form__cost">
               <legend>Стоимость</legend>
@@ -163,34 +154,34 @@
             </a>
           </div>
         </div>
-        <div class="goods clearfix">
+        <div class="goods">
           <article class="goods-item">
-            <img src="img/item-1.jpg" width="360" height="380"
+            <img class="goods__img" src="img/item-1.jpg" width="360" height="380"
                  alt="Монопод любительский">
-            <div class="goods__footer1">
+            <div class="goods__footer">
               <h3>Любительская селфи-палка</h3>
               <p>500 руб.</p>
             </div>
           </article>
           <article class="goods-item">
-            <img src="img/item-2.jpg" width="360" height="380"
+            <img class="goods__img" src="img/item-2.jpg" width="360" height="380"
                  alt="Монопод профессиональный">
-            <div class="goods__footer2">
-              <h3>Профессиональная селфи-палка</h3>
+            <div class="goods__footer">
+              <h3>Профессиональная<br> селфи-палка</h3>
               <p>1500 руб.</p>
           </article>
           <article class="goods-item">
-            <img src="img/item-3.jpg" width="360" height="380"
+            <img class="goods__img" src="img/item-3.jpg" width="360" height="380"
                  alt="Монопод непотопляемый">
-            <div class="goods__footer3">
+            <div class="goods__footer">
               <h3>Непотопляемая селфи-палка</h3>
               <p>2500 руб.</p>
             </div>
           </article>
           <article class="goods-item">
-            <img src="img/item-4.jpg" width="360" height="380"
+            <img class="goods__img" src="img/item-4.jpg" width="360" height="380"
                  alt="Монопод Следуй за мной">
-            <div class="goods__footer4">
+            <div class="goods__footer">
               <h3>Селфи-палка "Следуй за мной"</h3>
               <p>4900 руб.</p>
             </div>
@@ -198,56 +189,50 @@
           <div class="pagination">
             <a class="pagination_prev pagination_disabled">Назад</a>
             <a class="pagination_current">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
+            <a class="pagination_page" href="#">2</a>
+            <a class="pagination_page" href="#">3</a>
             <a class="pagination_next" href="#">Вперёд</a>
           </div>
         </div>
       </div>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer footerCatalog">
       <div class="container">
-        <div class="index-content-footer top clearfix">
+        <div class="index-content-footer-top clearfix">
           <a class="footer-logo" href="index.html">
-            <img src="img/logofooterDevice.png" width="163" height="36"
-                   alt="">
+            <img class="footer__image" src="img/logofooterDevice.png" width="163" height="36"
+                   alt="Логотип Device">
           </a>
           <div class="footer__setting">
-            <div class="footer__login">
-              <a href="#">Войти</a>
-            </div>
-            <div class="footer__comparison">
-              <a href="#">Сравнить</a>
-            </div>
-            <div class="footer__basket">
-              <a href="#">Корзина</a>
-            </div>
+            <a class="footer__login" href="#">Войти</a>
+            <a class="footer__comparison" href="#">Сравнить</a>
+            <a class="footer__basket" href="#">Корзина</a>
           </div>
         </div>
-        <div class="index-content-footer middle clearfix">
+        <div class="index-content-footer-middle clearfix">
           <p class="footer-left">г. Москва, ул. Строителей, 15</p>
           <nav class="footer-navigation">
-            <ul class="navigation__departments navigation__departments__footer">
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Гарантия</a></li>
-              <li><a href="#">Контакты</a></li>
+            <ul class="navigation__list">
+              <li><a class="navigation__shipping" href="#">Доставка</a></li>
+              <li><a class="navigation__guarantee" href="#">Гарантия</a></li>
+              <li><a class="navigation__contacts" href="#">Контакты</a></li>
             </ul>
           </nav>
           <p class="footer-right">Тел.:+7(495)495-95-95</p>
         </div>
-        <div class="index-content-footer bottom clearfix">
+        <div class="index-content-footer-bottom clearfix">
           <div class="social">
-            <a class="social__btn social__btn_fb" href="#">ВКонтакте</a>
-            <a class="social__btn social__btn_inst" href="#">Фесйбук</a>
-            <a class="social__btn social__btn_tw" href="#">Инстаграм</a>
+            <a class="social__btn social__btn_fb" href="#">Фесйбук</a>
+            <a class="social__btn social__btn_inst" href="#">Инстаграм</a>
+            <a class="social__btn social__btn_tw" href="#">Твиттер</a>
           </div>
           <div class="copyright">
             <a href="(https://htmlacademy.ru/intensive/htmlcss)">
-              <img src="img/htmlacademy.png" width="27" height="34" alt="">
+              <img class="footer__image" src="img/htmlacademy.png" width="27" height="34" alt="Логотип html academy">
             </a>
           </div>
       </div>
     </div>
-    </footer>
+  </footer>
   </body>
 </html>
