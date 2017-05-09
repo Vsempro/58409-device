@@ -997,6 +997,7 @@ body {
 
 .content__index {
   margin-top: 140px;
+  margin-bottom: 70px;
 }
 
 .content__index h2 {
@@ -1086,7 +1087,6 @@ body {
 */
 
 .main-footer {
-  margin-top: 70px;
   padding-top: 65px;
   padding-bottom: 60px;
   background-color: #464646;
@@ -1140,10 +1140,6 @@ float: right;
 /* 4 footerCatalog
    4.1. Сетка
 */
-
-.footerCatalog {
-  margin-top: 0;
-}
 
 /*  2.2. Элементы */
 
@@ -1396,17 +1392,27 @@ float: right;
   vertical-align: top;
 }
 
-.goods__img:hover {
-  opacity: 0.7;
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  background-color: rgba(238, 238, 238, 0);
+}
+
+.hover:hover {
+  background-color: rgba(238, 238, 238, 0.7);
   cursor: pointer;
 }
 
-.hover {
-  display: none;
+.hover:hover .button__article {
+  opacity: 1;
 }
 
-.goods__img:hover + .hover {
-  display: block;
+.hover:hover .shopping__comparison {
+  opacity: 0.5;
 }
 
 .goods__footer h3 {
@@ -1438,12 +1444,30 @@ float: right;
   font-family: Gilroy, Arial, sans-serif;
 }
 
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 38px;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: Gilroy, Arial, sans-serif;
+  vertical-align: top;
+  text-align: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 15px 10px;
+}
+
 .button__article {
   margin: 0;
-  position: absolute;
-  top: 170px;
-  left: 80px;
+  margin-top: 170px;
   z-index: 10;
+  opacity: 0;
 }
 
 .button__article:hover {
@@ -1467,16 +1491,16 @@ float: right;
 }
 
 .shopping__comparison {
-  position: absolute;
-  top: 230px;
-  left: 110px;
+  display: block;
+  margin-top: 15px;
   font-size: 13px;
   letter-spacing: 0.01em;
   font-family: OpenSans, Arial, sans-serif;
   font-weight: 300;
   color: black;
   text-decoration: none;
-  opacity: 0.5;
+  opacity: 0;
+  z-index: 10;
 }
 
 .shopping__comparison:hover {
@@ -1761,16 +1785,15 @@ float: right;
   text-decoration: none;
 }
 
-
-.sorting__item .sorting__item_active {
-  opacity: 1;
-}
-
 .sorting__item a:hover {
   opacity: 0.6;
 }
 
 .sorting__item a:active {
+  opacity: 1;
+}
+
+.sorting__item .sorting__item_active {
   opacity: 1;
 }
 
