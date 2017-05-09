@@ -125,33 +125,35 @@
                 <label for="no">Нет</label>
               </p>
             </fieldset>
-            <button class="form__button" type="submit">Показать</button>
+            <button class="button button__form" type="submit">Показать</button>
           </form>
         </div>
         <div class="sorting clearfix">
-          <div class="sorting__title">
-            <h2>Сортировка:</h2>
-          </div>
-          <div class="sorting__item">
-            <ul>
-              <li class="sorting__item_active">
-                <a>По цене</a>
-              </li>
-              <li>
-                <a href="#">По типу</a>
-              </li>
-              <li>
-                <a href="#">По популярности</a>
-              </li>
-            </ul>
-          </div>
-          <div class="sorting__indicator">
-            <a class="sorting__button sorting__button_up">
-              По возрастанию
-            </a>
-            <a class="sorting__button sorting__button_down sorting__button_active" href="#">
-              По убыванию
-            </a>
+          <div class="sorting__width">
+            <div class="sorting__title">
+              <h2>Сортировка:</h2>
+            </div>
+            <div class="sorting__item">
+              <ul>
+                <li>
+                  <a class="sorting__item_active">По цене</a>
+                </li>
+                <li>
+                  <a href="#">По типу</a>
+                </li>
+                <li>
+                  <a href="#">По популярности</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sorting__indicator">
+              <a class="sorting__button sorting__button_up sorting__button_active">
+                По возрастанию
+              </a>
+              <a class="sorting__button sorting__button_down" href="#">
+                По убыванию
+              </a>
+            </div>
           </div>
         </div>
         <div class="goods">
@@ -212,7 +214,7 @@
           </article>
           <div class="pagination">
             <a class="pagination_prev pagination_disabled">Назад</a>
-            <a class="pagination_current">1</a>
+            <a class="pagination_page pagination_current">1</a>
             <a class="pagination_page" href="#">2</a>
             <a class="pagination_page" href="#">3</a>
             <a class="pagination_next" href="#">Вперёд</a>

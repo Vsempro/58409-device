@@ -158,7 +158,7 @@
             Виртуальная реальность
           </a>
           <a  class="goods__item goods__item2" href="catalog.html">
-            Моноподы для селфи
+            Моноподы<br> для селфи
           </a>
           <a  class="goods__item goods__item3" href="#">
             Экшн-камеры
@@ -177,7 +177,7 @@
       <div class="background">
         <div class="tab container">
           <dl class="tab__list">
-            <dt class="tab__title tab__title1"><a href="#tab1">Доставка</a></dt>
+            <dt class="tab__title tab__title1 tab__title_active"><a href="#tab1">Доставка</a></dt>
               <dd class="tab__content tab__content_tab1" id="tab1">
                 <div class="tab__article">
                   <h2>Доставка</h2>
@@ -209,18 +209,10 @@
       </div>
       <div class="container">
         <div class="partners clearfix">
-            <a class="partners__item">
-              <img src="img/logo-1.png" width="260" height="100" alt="Крутая компания 1">
-            </a>
-            <a class="partners__item">
-              <img src="img/logo-2.png" width="260" height="100" alt="Крутая компания 2">
-            </a>
-            <a class="partners__item">
-              <img src="img/logo-3.png" width="260" height="100" alt="Крутая компания 3">
-            </a>
-            <a class="partners__item">
-              <img src="img/logo-4.png" width="260" height="100" alt="Крутая компания 4">
-            </a>
+            <a class="partners__item partners__item1"></a>
+            <a class="partners__item partners__item2"></a>
+            <a class="partners__item partners__item3"></a>
+            <a class="partners__item partners__item4"></a>
         </div>
         <div class="content__index clearfix">
           <div class="about-us">
@@ -251,7 +243,7 @@
             <a  class="button button__contacts" href="#">Напишите нам</a>
           </div>
         </div>
-      </div>            
+      </div>
     </main>
     <footer class="main-footer">
       <div class="container">
@@ -291,5 +283,38 @@
       </div>
     </div>
   </footer>
+  <div class="modalContent">
+    <button class="modalContent__button" type="button" title="Закрыть">
+      Закрыть
+    </button>
+    <form class="userForm" action="index.html" method="post">
+      <div class="userForm__top clearfix">
+        <label class="userForm__title1" for="nameId">Ваше имя:
+          <p>
+            <input class="userForm__user" type="text" name="userName" id="nameId" placeholder="Представьтесь, пожалуйста">
+          </p>
+        </label>
+        <label  class="userForm__title2" for="emailId">Ваш e-mail:
+          <p>
+            <input class="userForm__email" type="email" name="userEmail" id="emailId" placeholder="Для отправки ответа">
+          </p>
+        </label>
+      </div>
+      <label class="userForm__title3" for="textId">Текст письма:
+        <p>
+          <textarea class="userForm__text" name="userText" id="textId" rows="8" cols="100">В свободной форме</textarea>
+        </p>
+      </label>
+      <button class="button userForm__button" type="button" name="button">
+        Отправить
+      </button>
+    </form>
+  </div>
+  <div class="modalMap">
+    <button class="modalContent__button" type="button" title="Закрыть">
+      Закрыть
+    </button>
+    <div id="yandexMapId"></div>
+  </div>
   </body>
 </html>
