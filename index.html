@@ -240,7 +240,7 @@
             </p>
             <a class="map" href="#"><img class="map__image" src="img/map.png" width="560"
                height="222" alt="Месторасположение фирмы на карте: ул. Строителей, д.15"></a>
-            <a  class="button button__contacts" href="#">Напишите нам</a>
+            <a  class="button button__contacts button__contacts_js" href="#">Напишите нам</a>
           </div>
         </div>
       </div>
@@ -287,7 +287,7 @@
     <button class="modalContent__button" type="button" title="Закрыть">
       Закрыть
     </button>
-    <form class="userForm" action="index.html" method="post">
+    <form class="userForm" action="#" method="post">
       <div class="userForm__top clearfix">
         <label class="userForm__title1" for="nameId">Ваше имя:
           <p>
@@ -316,5 +316,83 @@
     </button>
     <div id="yandexMapId"></div>
   </div>
+  <script>
+    var aboutUsButton = document.querySelector(".button__about-us"),
+        modalContentForm = document.querySelector(".modalContent"),
+        modalContentButton = modalContentForm.querySelector(".modalContent__button"),
+
+        modalUserForm = modalContentForm.querySelector(".userForm"),
+        userName = modalContentForm.querySelector(".userForm__user"),
+        userEmail = modalContentForm.querySelector(".userForm__email"),
+        userText = modalContentForm.querySelector(".userForm__text"),
+
+        nameStorage = localStorage.getItem('userName'),
+        emailStorage = localStorage.getItem('userEmail');
+
+    aboutUsButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      modalContentForm.classList.add('modalContent_show');
+
+      if (nameStorage) {
+        userName.value = nameStorage;
+        userEmail.focus();
+        if (emailStorage) {
+          userEmail.value = emailStorage;
+          userText.focus();
+        }        
+      } else {
+        userName.focus();
+      }
+    });
+
+    modalContentButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      modalContentForm.classList.remove('modalContent_show');
+      modalContentForm.classList.remove('modalContent_error');
+    });
+
+    modalUserForm.addEventListener('submit', function(event) {
+      if (!userName.value || !userEmail.value) {
+        event.preventDefault();
+        modalContentForm.classList.remove('modalContent_error');
+        modalContentForm.offsetWidth = modalContentForm.offsetWidth;
+        modalContentForm.classList.add('modalContent_error');
+        console.log('Нужно ввести имя и e-mail');
+      } else {
+        localStorage.setItem('userName', userName.value);
+      }
+    });
+
+    window.addEventListener('keydown', function(event) {
+      if (event.keyCode === 27) {
+        if (modalContentForm.classList.contains('modalContent_show')) {
+          modalContentForm.classList.remove('modalContent_show');
+          modalContentForm.classList.remove('modalContent_error');
+        }
+      }
+    });
+
+    var mapOpen = document.querySelector(".button__contacts_js"),
+        mapModalContent = document.querySelector(".modalMap"),
+        mapClose = mapModalContent.querySelector(".modalContent__button");
+
+    mapOpen.addEventListener('click', function(event) {
+      event.preventDefault();
+      mapModalContent.classList.add('modalMap_show');
+    });
+
+    mapClose.addEventListener('click', function(event) {
+      event.preventDefault();
+      mapModalContent.classList.remove('modalMap_show');
+    });
+
+    window.addEventListener('keydown', function(event) {
+      if (event.keyCode === 27) {
+        if (mapModalContent.classList.contains('modalMap_show')) {
+          mapModalContent.classList.remove('modalMap_show');
+        }
+      }
+    });
+  </script>
   </body>
 </html>

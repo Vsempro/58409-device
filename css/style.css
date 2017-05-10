@@ -1057,7 +1057,7 @@ body {
   border: 3px solid #b2b2b2;
 }
 
-.button__about-us {
+.about-us .button__about-us {
   margin-top: 50px;
   margin-left: 0;
 }
@@ -1077,7 +1077,7 @@ body {
   vertical-align: top;
 }
 
-.button__contacts {
+.contacts .button__contacts {
   margin-top: 64px;
   margin-left: 0;
 }
@@ -1388,6 +1388,37 @@ float: right;
   position: relative;
 }
 
+.shopping_new::before {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 58px;
+  top: 25px;
+  right: 25px;
+  border-radius: 50% 50%;
+  background-color: transtarent;
+  border: 2px solid rgba(17, 17, 17, 0.1);
+}
+
+.shopping_new::after {
+  position: absolute;
+  content: "new";
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-family: Gilroy, Arial, sans-serif;
+  text-transform: uppercase;
+  top: 50px;
+  right: 40px;
+}
+
+.goods-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 50px;
+}
+
 .goods__img {
   vertical-align: top;
 }
@@ -1415,12 +1446,15 @@ float: right;
   opacity: 0.5;
 }
 
+.goods__footer {
+  margin-top: 35px;
+}
+
 .goods__footer h3 {
   float: left;
   vertical-align: top;
   margin: 0;
   padding: 0;
-  margin-top: 25px;
   max-width: 260px;
   font-size: 18px;
   line-height: normal;
@@ -1435,32 +1469,12 @@ float: right;
   vertical-align: top;
   margin: 0;
   padding: 0;
-  margin-top: 25px;
   font-size: 16px;
   line-height: normal;
   letter-spacing: 0.01em;
   color: #464646;
   font-weight: normal;
   font-family: Gilroy, Arial, sans-serif;
-}
-
-.button {
-  position: relative;
-  display: inline-block;
-  padding: 10px 38px;
-  font-size: 18px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-family: Gilroy, Arial, sans-serif;
-  vertical-align: top;
-  text-align: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  margin: 15px 10px;
 }
 
 .button__article {
@@ -1477,17 +1491,6 @@ float: right;
 .button__article:active {
   background-color: #f0c52e;
   opacity: 0.3;
-}
-
-.button::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 6px;
-  background-color: #f0c52e;
-  top: 18px;
-  left: 0px;
-  z-index: -1;
 }
 
 .shopping__comparison {
@@ -1747,7 +1750,7 @@ float: right;
   background: transparent;
 }
 
-1.button__form::before {
+.button__form::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -1937,6 +1940,33 @@ float: right;
 
 
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .modalContent p {
   margin: 0;
 }
@@ -1962,6 +1992,15 @@ float: right;
   background-color: white;
   box-shadow: 0 20px 40px rgba(4, 6, 6, 0.75);
   z-index: 10;
+}
+
+.modalContent_show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modalContent_error {
+  animation: shake 0.6s;
 }
 
 .modalContent__button {
@@ -2060,8 +2099,12 @@ float: right;
   left: 50%;
   margin-top: -297px;
   margin-left: -497px;
-  width: 994px;
-  height: 593px;
+  width: 960px;
+  height: 559px;
   background: gray url("../img/map-big.png");
   box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+}
+
+.modalMap_show {
+  display: block;
 }
