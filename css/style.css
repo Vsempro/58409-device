@@ -538,6 +538,10 @@ img {
   opacity: 0.3;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button__slider {
   margin-top: 40px;
   margin-left: 5px;
@@ -1381,24 +1385,21 @@ float: right;
 /* 6 Main-catalog
    6.1. Сетка
 */
-.title {
-  padding-top: 39px;
-}
-
 
 .main-catalog {
+  margin-top: 40px;
 }
 
 .filter {
   float: left;
-  width: 29%;
+  width: 30%;
   padding-bottom: 495px;
   background-color: #eeeeee;
 }
 
 .showcase {
   float: right;
-  width: 71%;
+  width: 70%;
 }
 
 .sorting {
@@ -1413,7 +1414,7 @@ float: right;
 
 .goods {
   float: right;
-  max-width: 755px;
+  max-width: 810px;
   margin-top: 67px;
 }
 
@@ -1576,8 +1577,9 @@ float: right;
 }
 
 .filter__title {
-  float: left;
-  width: 30%;
+  float: right;
+  width: 100%;
+  padding-bottom: 25px;
   background-color: #dcdcdc;
 }
 
@@ -1775,7 +1777,7 @@ float: right;
 
 .filter__title h2 {
   float: right;
-  margin-right: 87px;
+  margin-right: 175px;
 }
 
 .sorting__title h2 {
@@ -1784,7 +1786,7 @@ float: right;
 
 .filter__form {
   float: right;
-  width: 288px;
+  width: 280px;
   margin-top: 81px;
 }
 
