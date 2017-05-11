@@ -289,23 +289,24 @@
     </button>
     <form class="userForm" action="#" method="post">
       <div class="userForm__top clearfix">
-        <label class="userForm__title1" for="nameId">Ваше имя:
-          <p>
-            <input class="userForm__user" type="text" name="userName" id="nameId" placeholder="Представьтесь, пожалуйста">
-          </p>
-        </label>
-        <label  class="userForm__title2" for="emailId">Ваш e-mail:
+        <div class="userForm__title1">
+          <label for="nameId">Ваше имя:</label>
+            <p>
+              <input class="userForm__user" type="text" name="userName" id="nameId" placeholder="Представьтесь, пожалуйста">
+            </p>
+        </div>
+        <div class="userForm__title2">
+          <label for="emailId">Ваш e-mail:</label>
           <p>
             <input class="userForm__email" type="email" name="userEmail" id="emailId" placeholder="Для отправки ответа">
           </p>
-        </label>
+        </div>          
       </div>
-      <label class="userForm__title3" for="textId">Текст письма:
+      <label class="userForm__title3" for="textId">Текст письма:</label>
         <p>
-          <textarea class="userForm__text" name="userText" id="textId" rows="8" cols="100">В свободной форме</textarea>
+          <textarea class="userForm__text" name="userText" id="textId" placeholder="В свободной форме" rows="8" cols="100"></textarea>
         </p>
-      </label>
-      <button class="button userForm__button" type="button" name="button">
+      <button class="button userForm__button" type="submit" name="button">
         Отправить
       </button>
     </form>
@@ -333,13 +334,10 @@
       event.preventDefault();
       modalContentForm.classList.add('modalContent_show');
 
-      if (nameStorage) {
+      if (nameStorage && emailStorage) {
         userName.value = nameStorage;
-        userEmail.focus();
-        if (emailStorage) {
-          userEmail.value = emailStorage;
-          userText.focus();
-        }        
+        userEmail.value = emailStorage;
+        userText.focus();
       } else {
         userName.focus();
       }
@@ -360,6 +358,7 @@
         console.log('Нужно ввести имя и e-mail');
       } else {
         localStorage.setItem('userName', userName.value);
+        localStorage.setItem('userEmail', userEmail.value)
       }
     });
 
