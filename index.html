@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Магазин гаджетов "Девайс"</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
@@ -15,8 +15,8 @@
         <div class="header__setting clearfix">
           <form class="searchForm" action="#" method="get">
             <label for="inputId"></label>
-              <input class="searchForm__input" type="search" id="inputId" placeholder="Поиск по сайту">
-              <button class="searchForm__button" type="submit">Найти</button>
+            <input class="searchForm__input" type="search" id="inputId" placeholder="Поиск по сайту">
+            <button class="searchForm__button" type="submit">Найти</button>
           </form>
           <div class="header__items clearfix">
             <a class="header__login" href="#">Войти</a>
@@ -238,9 +238,9 @@
               Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
               проверить работоспособность покупки. Всякое бывает.
             </p>
-            <a class="map" href="#"><img class="map__image" src="img/map.png" width="560"
+            <a class="map_js" href="mapcontent.html"><img class="map__image" src="img/map.png" width="560"
                height="222" alt="Месторасположение фирмы на карте: ул. Строителей, д.15"></a>
-            <a  class="button button__contacts button__contacts_js" href="#">Напишите нам</a>
+            <a  class="button button__contacts" href="modalcontent.html">Напишите нам</a>
           </div>
         </div>
       </div>
@@ -280,118 +280,45 @@
               <img src="img/htmlacademy.png" width="27" height="34" alt="Логотип html academy">
             </a>
           </div>
+        </div>
       </div>
-    </div>
-  </footer>
-  <div class="modalContent">
-    <button class="modalContent__button" type="button" title="Закрыть">
+    </footer>
+    <div class="modalcontent">
+      <button class="modalcontent__button" type="button" title="Закрыть">
       Закрыть
-    </button>
-    <form class="userForm" action="#" method="post">
-      <div class="userForm__top clearfix">
-        <div class="userForm__title1">
-          <label for="nameId">Ваше имя:</label>
+      </button>
+      <form class="userform" action="#" method="post">
+      <div class="userform__top clearfix">
+        <div class="userform__title1">
+          <label for="nameid">Ваше имя:</label>
             <p>
-              <input class="userForm__user" type="text" name="userName" id="nameId" placeholder="Представьтесь, пожалуйста">
+              <input class="userform__user" type="text" name="userName" id="nameid" placeholder="Представьтесь, пожалуйста">
             </p>
         </div>
-        <div class="userForm__title2">
-          <label for="emailId">Ваш e-mail:</label>
+        <div class="userform__title2">
+          <label for="emailid">Ваш e-mail:</label>
           <p>
-            <input class="userForm__email" type="email" name="userEmail" id="emailId" placeholder="Для отправки ответа">
+            <input class="userform__email" type="email" name="useremail" id="emailid" placeholder="Для отправки ответа">
           </p>
-        </div>          
+        </div>
       </div>
-      <label class="userForm__title3" for="textId">Текст письма:</label>
+      <label class="userform__title3" for="textid">Текст письма:</label>
         <p>
-          <textarea class="userForm__text" name="userText" id="textId" placeholder="В свободной форме" rows="8" cols="100"></textarea>
+          <textarea class="userform__text" name="usertext" id="textid" placeholder="В свободной форме" rows="8" cols="104"></textarea>
         </p>
-      <button class="button userForm__button" type="submit" name="button">
+      <button class="button userform__button" type="submit" name="button">
         Отправить
       </button>
     </form>
-  </div>
-  <div class="modalMap">
-    <button class="modalContent__button" type="button" title="Закрыть">
+    </div>
+    <div class="modalmap">
+    <button class="modalcontent__button" type="button" title="Закрыть">
       Закрыть
     </button>
-    <div id="yandexMapId"></div>
+    <iframe src="https://api-maps.yandex.ru/frame/v1/-/C6qpMLlM"
+            width="960" height="559" frameborder="0"></iframe>
   </div>
-  <script>
-    var aboutUsButton = document.querySelector(".button__about-us"),
-        modalContentForm = document.querySelector(".modalContent"),
-        modalContentButton = modalContentForm.querySelector(".modalContent__button"),
-
-        modalUserForm = modalContentForm.querySelector(".userForm"),
-        userName = modalContentForm.querySelector(".userForm__user"),
-        userEmail = modalContentForm.querySelector(".userForm__email"),
-        userText = modalContentForm.querySelector(".userForm__text"),
-
-        nameStorage = localStorage.getItem('userName'),
-        emailStorage = localStorage.getItem('userEmail');
-
-    aboutUsButton.addEventListener('click', function(event) {
-      event.preventDefault();
-      modalContentForm.classList.add('modalContent_show');
-
-      if (nameStorage && emailStorage) {
-        userName.value = nameStorage;
-        userEmail.value = emailStorage;
-        userText.focus();
-      } else {
-        userName.focus();
-      }
-    });
-
-    modalContentButton.addEventListener('click', function(event) {
-      event.preventDefault();
-      modalContentForm.classList.remove('modalContent_show');
-      modalContentForm.classList.remove('modalContent_error');
-    });
-
-    modalUserForm.addEventListener('submit', function(event) {
-      if (!userName.value || !userEmail.value) {
-        event.preventDefault();
-        modalContentForm.classList.remove('modalContent_error');
-        modalContentForm.offsetWidth = modalContentForm.offsetWidth;
-        modalContentForm.classList.add('modalContent_error');
-        console.log('Нужно ввести имя и e-mail');
-      } else {
-        localStorage.setItem('userName', userName.value);
-        localStorage.setItem('userEmail', userEmail.value)
-      }
-    });
-
-    window.addEventListener('keydown', function(event) {
-      if (event.keyCode === 27) {
-        if (modalContentForm.classList.contains('modalContent_show')) {
-          modalContentForm.classList.remove('modalContent_show');
-          modalContentForm.classList.remove('modalContent_error');
-        }
-      }
-    });
-
-    var mapOpen = document.querySelector(".button__contacts_js"),
-        mapModalContent = document.querySelector(".modalMap"),
-        mapClose = mapModalContent.querySelector(".modalContent__button");
-
-    mapOpen.addEventListener('click', function(event) {
-      event.preventDefault();
-      mapModalContent.classList.add('modalMap_show');
-    });
-
-    mapClose.addEventListener('click', function(event) {
-      event.preventDefault();
-      mapModalContent.classList.remove('modalMap_show');
-    });
-
-    window.addEventListener('keydown', function(event) {
-      if (event.keyCode === 27) {
-        if (mapModalContent.classList.contains('modalMap_show')) {
-          mapModalContent.classList.remove('modalMap_show');
-        }
-      }
-    });
-  </script>
+    <script src="js/modalcontent.min.js"></script>
+    <script src="js/modalmap.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Напишите нам</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html">
+          <img class="header__logo" src="img/logoDevice.png" width="164" height="36" alt="Логотип Device">
+        </a>
+        <div class="header__setting clearfix">
+          <form class="searchForm" action="#" method="get">
+            <label for="inputId"></label>
+              <input class="searchForm__input" type="search" id="inputId" placeholder="Поиск по сайту">
+              <button class="searchForm__button" type="submit">Найти</button>
+          </form>
+          <div class="header__items clearfix">
+            <a class="header__login" href="#">Войти</a>
+            <a class="header__comparison" href="#">Сравнить</a>
+            <a class="header__basket" href="#">Корзина</a>
+          </div>
+        </div>
+        <nav class="navigation__departments">
+          <ul class="navigation__list">
+            <li class="navigation__catalog">
+              <a class="mainList" href="#">Каталог товаров</a>
+              <ul class="navigation__goods">
+                <li class="reality">
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li class="bracelets">
+                  <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="quadcopters">
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+                <li class="monopods">
+                  <a href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li class="watchs">
+                  <a href="#">Умные часы</a>
+                </li>
+                <li class="camera">
+                  <a href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__shipping">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="navigation__guarantee">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="navigation__contacts">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h1 class="main__title">Напишите нам</h1>
+      <div class="modalcontent_page">
+        <form class="userform" action="#" method="post">
+          <div class="userform__top clearfix">
+            <div class="userform__title1">
+              <label for="nameid">Ваше имя:</label>
+                <p>
+                  <input class="userform__user" type="text" name="userName" id="nameid" placeholder="Представьтесь, пожалуйста" autofocus>
+                </p>
+            </div>
+            <div class="userform__title2">
+              <label for="emailid">Ваш e-mail:</label>
+              <p>
+                <input class="userform__email" type="email" name="useremail" id="emailid" placeholder="Для отправки ответа">
+              </p>
+            </div>
+          </div>
+          <label class="userform__title3" for="textid">Текст письма:</label>
+            <p>
+              <textarea class="userform__text" name="usertext" id="textid" placeholder="В свободной форме" rows="8" cols="104"></textarea>
+            </p>
+          <button class="button userform__button" type="submit" name="button">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="index-content-footer-top clearfix">
+          <a class="footer-logo" href="index.html">
+            <img class="footer__image" src="img/logofooterDevice.png" width="163" height="36"
+                   alt="Логотип Device">
+          </a>
+          <div class="footer__setting">
+            <a class="footer__login" href="#">Войти</a>
+            <a class="footer__comparison" href="#">Сравнить</a>
+            <a class="footer__basket" href="#">Корзина</a>
+          </div>
+        </div>
+        <div class="index-content-footer-middle clearfix">
+          <p class="footer-left">г. Москва, ул. Строителей, 15</p>
+          <nav class="footer-navigation">
+            <ul class="navigation__list">
+              <li><a class="navigation__shipping" href="#">Доставка</a></li>
+              <li><a class="navigation__guarantee" href="#">Гарантия</a></li>
+              <li><a class="navigation__contacts" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <p class="footer-right">Тел.:+7(495)495-95-95</p>
+        </div>
+        <div class="index-content-footer-bottom clearfix">
+          <div class="social">
+            <a class="social__btn social__btn_fb" href="#">Фесйбук</a>
+            <a class="social__btn social__btn_inst" href="#">Инстаграм</a>
+            <a class="social__btn social__btn_tw" href="#">Твиттер</a>
+          </div>
+          <div class="copyright">
+            <a class="footer__image" href="(https://htmlacademy.ru/intensive/htmlcss)">
+              <img src="img/htmlacademy.png" width="27" height="34" alt="Логотип html academy">
+            </a>
+          </div>
+      </div>
+      </div>
+    </footer>
+  </body>
+</html>

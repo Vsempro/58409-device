@@ -35,11 +35,6 @@ body {
   background-color: white;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .clearfix::after {
   content: "";
   display: table;
@@ -108,7 +103,7 @@ img {
 }
 
 .searchForm__input {
-  width: 430px;
+  width: 345px;
   margin: 0;
   padding-left: 35px;
   font-size: 15px;
@@ -170,7 +165,7 @@ img {
 .searchForm__button::after {
   content: "";
   position: absolute;
-  width: 445px;
+  width: 355px;
   height: 2px;
   background-color: black;
   bottom: -2px;
@@ -346,7 +341,7 @@ img {
   opacity: 0.3;
 }
 
-.navigation__list > li:hover .navigation__goods {
+.navigation__catalog:hover .navigation__goods {
   display: block;
 }
 
@@ -356,30 +351,42 @@ img {
 }
 
 .navigation__goods .reality {
+  max-width: 190px;
+  max-height: 25px;
   margin-left: 60px;
 }
 
 .navigation__goods .bracelets {
+  max-width: 135px;
+  max-height: 25px;
   margin-left: 35px;
 }
 
 .navigation__goods .quadcopters {
+  max-width: 120px;
+  max-height: 25px;
   margin-left: 50px;
   margin-right: 495px;
 }
 
 .navigation__goods .monopods {
+  max-width: 165px;
+  max-height: 25px;
   margin-top: 0;
   margin-left: 60px;
 }
 
 .navigation__goods .watchs {
+  max-width: 145px;
+  max-height: 25px;
   margin-top: 0;
   margin-right: 715px;
   margin-left: 57px;
 }
 
 .navigation__goods .camera {
+  max-width: 250px;
+  max-height: 25px;
   margin-top: 0;
   margin-left: 60px;
 }
@@ -486,10 +493,16 @@ img {
   width: 560px;
 }
 
+.slide_image {
+  max-width: 100%;
+  height: auto;
+}
+
 .slider__content h1 {
   margin: 0;
   padding: 0;
-  width: 398px;
+  max-width: 398px;
+  max-height: 175px;
   font-size: 47px;
   line-height: normal;
   letter-spacing: 0.01em;
@@ -505,6 +518,7 @@ img {
   margin: 0;
   padding: 0;
   max-width: 480px;
+  max-height: 60px;
   color: #464646;
   line-height: 30px;
   margin-top: 20px;
@@ -543,6 +557,8 @@ img {
 }
 
 .button__slider {
+  max-width: 215px;
+  max-height: 20px;
   margin-top: 40px;
   margin-left: 5px;
 }
@@ -619,19 +635,19 @@ img {
 .slider__slides .slide1 {
   background-image: url("../img/slider.png");
   background-repeat: no-repeat;
-  background-position: 925px 45px;
+  background-position: 885px 2px;
 }
 
 .slider__slides .slide2 {
   background-image: url("../img/slider.png");
   background-repeat: no-repeat;
-  background-position: 925px -106px;
+  background-position: 885px -227px;
 }
 
 .slider__slides .slide3 {
   background-image: url("../img/slider.png");
   background-repeat: no-repeat;
-  background-position: 925px -257px;
+  background-position: 885px -460px;
 }
 
 #btn-1:checked ~ .slider__controls label[for="btn-1"],
@@ -1078,7 +1094,7 @@ img {
   list-style-type: none;
   margin: 20px 0;
   padding: 0;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.01em;
   font-family: Gilroy, Arial, sans-serif;
@@ -1117,7 +1133,7 @@ img {
 }
 
 .contacts .button__contacts {
-  margin-top: 64px;
+  margin-top: 110px;
   margin-left: 0;
 }
 
@@ -1709,7 +1725,7 @@ float: right;
 
 .form__bluetooth label::before {
   border-radius: 50% 50%;
-  background-color: white;
+  background-color: transparent;
   border: 2px solid #c7c7c7;
 }
 
@@ -1914,6 +1930,11 @@ float: right;
   opacity: 1;
 }
 
+.goods__img {
+  max-width: 100%;
+  height: auto;
+}
+
 .goods__footer h3 {
   float: left;
   vertical-align: top;
@@ -1945,6 +1966,7 @@ float: right;
 
 .pagination a {
   display: inline-block;
+  vertical-align: top;
   font-size: 16px;
   text-transform: uppercase;
   line-height: normal;
@@ -1978,7 +2000,6 @@ float: right;
   padding: 25px 30px;
 }
 
-
 .pagination .pagination_page {
   opacity: 0.3;
 }
@@ -1996,12 +2017,6 @@ float: right;
 .pagination .pagination_current:active {
   opacity: 1;
 }
-
-.pagination .pagination_disabled {
-
-}
-
-
 
 @keyframes bounce {
   0% {
@@ -2030,17 +2045,17 @@ float: right;
   }
 }
 
-.modalContent p {
+.modalcontent p {
   margin: 0;
 }
 
-.modalContent input,
-.modalContent textarea {
+.modalcontent input,
+.modalcontent textarea {
   border: 0;
   padding: 0;
 }
 
-.modalContent {
+.modalcontent {
   display: none;
   position: fixed;
   top: 50%;
@@ -2058,22 +2073,35 @@ float: right;
   z-index: 10;
 }
 
-.modalContent_show {
+.modalcontent_show {
   display: block;
   animation: bounce 0.6s;
 }
 
-.modalContent_error {
+.modalcontent_page {
+  width: 760px;
+  margin: 18px auto;
+  margin-bottom: 36px;
+  padding: 0 100px;
+  font-size: 14px;
+  letter-spacing: 0;
+  color: #464646;
+  background-color: white;
+  box-shadow: 0 20px 40px rgba(4, 6, 6, 0.75);
+  z-index: 10;
+}
+
+.modalcontent_error {
   animation: shake 0.6s;
 }
 
-.modalContent_error input[type="text"],
-.modalContent_error input[type="email"] {
+.modalcontent_error input[type="text"],
+.modalcontent_error input[type="email"] {
   background-color: #edb5b5;
   opacity: 0.5;
 }
 
-.modalContent__button {
+.modalcontent__button {
   position: absolute;
   outline: none;
   top: 20px;
@@ -2088,18 +2116,18 @@ float: right;
   opacity: 0.5;
 }
 
-.modalContent__button:hover,
-.modalContent__button:active {
+.modalcontent__button:hover,
+.modalcontent__button:active {
   opacity: 1.0;
 }
 
-.modalContent__button:active::before,
-.modalContent__button:active::after {
+.modalcontent__button:active::before,
+.modalcontent__button:active::after {
   opacity: 0.3;
 }
 
-.modalContent__button::before,
-.modalContent__button::after {
+.modalcontent__button::before,
+.modalcontent__button::after {
   content: "";
   position: absolute;
   top: 27px;
@@ -2109,21 +2137,21 @@ float: right;
   background-color: white;
 }
 
-.modalContent__button::before {
+.modalcontent__button::before {
   transform: rotate(45deg);
 }
 
-.modalContent__button::after {
+.modalcontent__button::after {
   transform: rotate(-45deg);
 }
 
-.userForm {
+.userform {
   padding-bottom: 75px;
 }
 
-.userForm__title1,
-.userForm__title2,
-.userForm__title3 {
+.userform__title1,
+.userform__title2,
+.userform__title3 {
   font-size: 18px;
   letter-spacing: 0;
   color: black;
@@ -2131,69 +2159,80 @@ float: right;
   font-family: Gilroy, Arial, sans-serif;
 }
 
-.userForm__title1 {
+.userform__title1 {
   float: left;
 }
 
-.userForm__title2 {
+.userform__title2 {
   float: right;
 }
 
-.userForm__title3 {
+.userform__title3 {
   display: block;
   margin-top: 35px;
 }
 
-.userForm__user,
-.userForm__email,
-.userForm__text {
+.userform__user,
+.userform__email,
+.userform__text {
   font-size: 14px;
   letter-spacing: 0em;
   font-family: OpenSans, Arial, sans-serif;
   font-weight: 300;
   color: #464646;
+  opacity: 0.4;
 }
 
-.userForm .userForm__user,
-.userForm .userForm__email {
+.userform .userform__user,
+.userform .userform__email {
   min-width: 340px;
   padding: 17px 10px;
   margin-top: 10px;
+  border: none;
   background-color: #eaeaea;
   opacity: 0.5;
 }
 
-.userForm .userForm__user:hover,
-.userForm .userForm__email:hover,
-.userForm .userForm__text:hover {
+.userform .userform__text {
+  max-width: 740px;
+  padding: 17px 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #eaeaea;
+  opacity: 0.5;
+}
+
+.userform .userform__user:hover,
+.userform .userform__email:hover,
+.userform .userform__text:hover {
   opacity: 0.8;
 }
 
-.userForm .userForm__user:focus,
-.userForm .userForm__email:focus,
-.userForm .userForm__text:focus {
+.userform .userform__user:focus,
+.userform .userform__email:focus,
+.userform .userform__text:focus {
   outline: 3px solid #f7e296;
   opacity: 0.5;
 }
 
-.userForm .userForm__text {
+.userForm .userform__text {
   padding: 15px 20px;
   margin-top: 10px;
   background-color: #eaeaea;
   opacity: 0.5;
 }
 
-.userForm .userForm__text:hover {
+.userForm .userform__text:hover {
   opacity: 0.8;
 }
 
-.userForm__button {
+.userform__button {
   margin: 0;
   margin-top: 35px;
   z-index: 12;
 }
 
-.modalMap {
+.modalmap {
   display: none;
   position: absolute;
   top: 1852px;
@@ -2206,6 +2245,15 @@ float: right;
   box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
 }
 
-.modalMap_show {
+.modalmap_page {
+  margin: 18px auto;
+  margin-bottom: 36px;
+  width: 960px;
+  height: 559px;
+  background: gray url("../img/map-big.png");
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+}
+
+.modalmap_show {
   display: block;
 }
