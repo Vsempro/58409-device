@@ -103,8 +103,10 @@ body {
 }
 
 .searchForm__input {
+  -webkit-appearance: textfield;
   width: 345px;
   margin: 0;
+  padding: 0;
   padding-left: 35px;
   font-size: 15px;
   line-height: 36px;
@@ -121,13 +123,57 @@ body {
   background-color: #f7e296;
 }
 
-.searchForm__input:hover {
-  opacity: 0.6;
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.searchForm__input:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.searchForm__input:hover:-moz-placeholder {
+color: rgba(0, 0, 0, 0.6);
+}
+
+.searchForm__input:hover::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.searchForm__input:hover:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.searchForm__input:active::-webkit-input-placeholder:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.searchForm__input:active:-moz-placeholder:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.searchForm__input:active::-moz-placeholder:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.searchForm__input:active:-ms-input-placeholder:focus {
+  color: rgba(0, 0, 0, 1);
 }
 
 .searchForm__input:focus {
-  opacity: 1;
   outline: none;
+  opacity: 1.0;
 }
 
 .searchForm__button {
@@ -2289,11 +2335,11 @@ float: right;
 
 .modalmap {
   display: none;
-  position: absolute;
-  top: 1852px;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  margin-top: -297px;
-  margin-left: -497px;
+  margin-top: -280px;
+  margin-left: -480px;
   width: 960px;
   height: 559px;
   background: gray url("../img/map-big.png");
