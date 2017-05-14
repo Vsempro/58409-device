@@ -240,7 +240,7 @@ color: rgba(0, 0, 0, 0.6);
   opacity: 0.3;
 }
 
-.header__login {
+.header__items .header__login {
   float: left;
   max-width: 130px;
   background-image: url("../img/spiteDevice.png");
@@ -248,16 +248,15 @@ color: rgba(0, 0, 0, 0.6);
   background-position: -57px -86px;
 }
 
-.header__comparison {
+.header__items .header__comparison {
   float: left;
   max-width: 70px;
-  margin-left: 200px;
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   background-position: -50px -116px;
 }
 
-.header__basket {
+.header__items .header__basket {
   float: right;
   max-width: 70px;
   margin-left: 25px;
@@ -746,7 +745,7 @@ color: rgba(0, 0, 0, 0.6);
   padding: 0;
   width: 1160px;
   height: 390px;
-  margin-top: 85px;
+  margin-top: 78px;
 }
 
 .partners {
@@ -1183,11 +1182,12 @@ color: rgba(0, 0, 0, 0.6);
 }
 
 .map__image {
+  margin-top: 40px;
   vertical-align: top;
 }
 
 .contacts .button__contacts {
-  margin-top: 110px;
+  margin-top: 70px;
   margin-left: 0;
 }
 
@@ -1207,7 +1207,7 @@ color: rgba(0, 0, 0, 0.6);
 
 .index-content-footer-bottom {
   position: relative;
-  margin-top: 55px;
+  margin-top: 50px;
 }
 
 .index-content-footer-bottom::before {
