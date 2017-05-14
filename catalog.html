@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Моноподы для селфи</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header headerCatalog">
@@ -63,7 +63,7 @@
       </div>
     </header>
     <main>
-      <div class="header__container">
+      <div class="container container_catalog">
         <h1 class="main__title">Моноподы для селфи</h1>
         <div class="breadcrumbs">
           <a href="index.html">Главная</a>
@@ -71,8 +71,12 @@
           <a class="breadcrumbs__active">Моноподы для селфи</a>
         </div>
       </div>
-      <div class="main-catalog clearfix">
-        <div class="filter clearfix">
+      <div class="decoration clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="main-catalog container container_catalog clearfix">
+        <div class="filter">
         <div class="filter__title">
           <h2>Фильтр:</h2>
         </div>
@@ -130,91 +134,91 @@
           </form>
         </div>
         </div>
-        <div class="sorting">
-          <div class="sorting_width">
-            <div class="sorting__title">
-              <h2>Сортировка:</h2>
-            </div>
-            <div class="sorting__list">
-              <ul>
-                <li>
-                  <a class="sorting__item sorting__item_active">По цене</a>
-                </li>
-                <li>
-                  <a class="sorting__item" href="#">По типу</a>
-                </li>
-                <li>
-                  <a class="sorting__item" href="#">По популярности</a>
-                </li>
-              </ul>
-            </div>
-            <div class="sorting__indicator">
-              <a class="sorting__button sorting__button_up sorting__button_active">
-                По возрастанию
-              </a>
-              <a class="sorting__button sorting__button_down" href="#">
-                По убыванию
-              </a>
-            </div>
+        <div class="sorting clearfix">
+          <div class="sorting__title">
+            <h2>Сортировка:</h2>
+          </div>
+          <div class="sorting__list">
+            <ul>
+              <li>
+                <a class="sorting__item sorting__item_active">По цене</a>
+              </li>
+              <li>
+                <a class="sorting__item" href="#">По типу</a>
+              </li>
+              <li>
+                <a class="sorting__item" href="#">По популярности</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sorting__indicator">
+            <a class="sorting__button sorting__button_up sorting__button_active">
+              По возрастанию
+            </a>
+            <a class="sorting__button sorting__button_down" href="#">
+              По убыванию
+            </a>
           </div>
         </div>
-        <div class="goods">
-          <article class="goods-item">
-            <div class="shopping">
-              <img class="goods__img" src="img/item-1.jpg" width="360" height="380"
-                     alt="Монопод любительский">
-              <div class="hover">
-                <a  class="button button__article" href="#">В корзину</a>
-                <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+        <div class="showcase">
+          <div class="goods clearfix">
+            <article class="goods-item">
+              <div class="shopping">
+                <img class="goods__img" src="img/item-1.jpg" width="360" height="380"
+                       alt="Монопод любительский">
+                <div class="hover">
+                  <a  class="button button__article" href="#">В корзину</a>
+                  <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+                </div>
               </div>
-            </div>
-            <div class="goods__footer">
-              <h3>Любительская селфи-палка</h3>
-              <p>500 руб.</p>
-            </div>
-          </article>
-          <article class="goods-item">
-            <div class="shopping">
-              <img class="goods__img" src="img/item-2.jpg" width="360" height="380"
-                     alt="Монопод профессиональный">
-              <div class="hover">
-                <a  class="button button__article" href="#">В корзину</a>
-                <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+              <div class="goods__footer clearfix">
+                <h3>Любительская селфи-палка</h3>
+                <p>500 руб.</p>
               </div>
-            </div>
-            <div class="goods__footer">
-              <h3>Профессиональная<br> селфи-палка</h3>
-              <p>1500 руб.</p>
-            </div>
-          </article>
-          <article class="goods-item">
-            <div class="shopping">
-              <img class="goods__img" src="img/item-3.jpg" width="360" height="380"
-                     alt="Монопод непотопляемый">
-              <div class="hover">
-                <a  class="button button__article" href="#">В корзину</a>
-                <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+            </article>
+            <article class="goods-item">
+              <div class="shopping">
+                <img class="goods__img" src="img/item-2.jpg" width="360" height="380"
+                       alt="Монопод профессиональный">
+                <div class="hover">
+                  <a  class="button button__article" href="#">В корзину</a>
+                  <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+                </div>
               </div>
-            </div>
-            <div class="goods__footer">
-              <h3>Непотопляемая селфи-палка</h3>
-              <p>2500 руб.</p>
-            </div>
-          </article>
-          <article class="goods-item">
-            <div class="shopping shopping_new">
-              <img class="goods__img" src="img/item-4.jpg" width="360" height="380"
-                     alt="Монопод Следуй за мной">
-              <div class="hover">
-                <a  class="button button__article" href="#">В корзину</a>
-                <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+              <div class="goods__footer">
+                <h3>Профессиональная<br> селфи-палка</h3>
+                <p>1500 руб.</p>
               </div>
-            </div>
-            <div class="goods__footer">
-              <h3>Селфи-палка "Следуй за мной"</h3>
-              <p>4900 руб.</p>
-            </div>
-          </article>
+            </article>
+            <article class="goods-item">
+              <div class="shopping">
+                <img class="goods__img" src="img/item-3.jpg" width="360" height="380"
+                       alt="Монопод непотопляемый">
+                <div class="hover">
+                  <a  class="button button__article" href="#">В корзину</a>
+                  <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+                </div>
+              </div>
+              <div class="goods__footer">
+                <h3>Непотопляемая селфи-палка</h3>
+                <p>2500 руб.</p>
+              </div>
+            </article>
+            <article class="goods-item">
+              <div class="shopping shopping_new">
+                <img class="goods__img" src="img/item-4.jpg" width="360" height="380"
+                       alt="Монопод Следуй за мной">
+                <div class="hover">
+                  <a  class="button button__article" href="#">В корзину</a>
+                  <a class="shopping__comparison" href="#">Добавить к сравнению</a>
+                </div>
+              </div>
+              <div class="goods__footer">
+                <h3>Селфи-палка "Следуй за мной"</h3>
+                <p>4900 руб.</p>
+              </div>
+            </article>
+          </div>
           <div class="pagination">
             <a class="pagination_prev pagination_disabled">Назад</a>
             <a class="pagination_page pagination_current">1</a>
@@ -223,7 +227,7 @@
             <a class="pagination_next" href="#">Вперёд</a>
           </div>
         </div>
-        </div>
+      </div>
     </main>
     <footer class="main-footer footerCatalog">
       <div class="container">
@@ -233,7 +237,7 @@
                    alt="Логотип Device">
           </a>
           <div class="footer__setting">
-            <a class="footer__login" href="#">Войти</a>
+            <a class="footer__login" href="#">Выйти</a>
             <a class="footer__comparison" href="#">Сравнить</a>
             <a class="footer__basket" href="#">Корзина</a>
           </div>
