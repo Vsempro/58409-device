@@ -516,8 +516,29 @@ color: rgba(0, 0, 0, 0.6);
   margin-top: 45px;
   margin-left: 90px;
   vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+.slide_image1 {
+  margin-top: 45px;
+  margin-left: 90px;
   width: 384px;
   height: 486px;
+}
+
+.slide_image2 {
+  margin-top: 54px;
+  margin-left: 117px;
+  width: 345px;
+  height: 485px;
+}
+
+.slide_image3 {
+  margin-top: 109px;
+  margin-left: 32px;
+  width: 526px;
+  height: 334px;
 }
 
 .slider__content {
@@ -526,15 +547,10 @@ color: rgba(0, 0, 0, 0.6);
   width: 560px;
 }
 
-.slide_image {
-  max-width: 100%;
-  height: auto;
-}
-
 .slider__content h1 {
   margin: 0;
   padding: 0;
-  max-width: 398px;
+  max-width: 505px;
   max-height: 175px;
   font-size: 47px;
   line-height: normal;
@@ -668,19 +684,19 @@ color: rgba(0, 0, 0, 0.6);
 .slider__slides .slide1 {
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
-  background-position: 885px -455px;
+  background-position: 834px -3839px;
 }
 
 .slider__slides .slide2 {
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
-  background-position: 885px -685px;
+  background-position: 834px -4068px;
 }
 
 .slider__slides .slide3 {
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
-  background-position: 885px -682px;
+  background-position: 834px -4302px;
 }
 
 #btn-1:checked ~ .slider__controls label[for="btn-1"],
@@ -792,7 +808,7 @@ color: rgba(0, 0, 0, 0.6);
   height: 160px;
   left: 0;
   top: 0;
-  background-image: url("../img/depatments.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
 }
 
@@ -802,28 +818,28 @@ color: rgba(0, 0, 0, 0.6);
 }
 
 .goods__item1::after {
-  background-position: -30px -10px;
+  background-position: -77px -613px;
 
 }
 
 .goods__item2::after {
-  background-position: -25px -190px;
+  background-position: -70px -797px;
 }
 
 .goods__item3::after {
-  background-position: -10px -435px;
+  background-position: -61px -1039px;
 }
 
 .goods__item4::after {
-  background-position: -35px -630px;
+  background-position: -82px -1234px;
 }
 
 .goods__item5::after {
-  background-position: -7px -830px;
+  background-position: -55px -1437px;
 }
 
 .goods__item6::after {
-  background-position: -50px -1035px;
+  background-position: -96px -1638px;
 }
 
 .tab__list,
@@ -991,9 +1007,9 @@ color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 85px;
   right: 63px;
-  background-image: url("../img/tab.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
-  background-position: -10px -10px;
+  background-position: -62px -3145px;
 }
 
 .tab__content_tab2::after {
@@ -1003,9 +1019,9 @@ color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 85px;
   right: 63px;
-  background-image: url("../img/tab.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
-  background-position: -10px -194px;
+  background-position: -62px -3330px;
 }
 
 .tab__content_tab3::after {
@@ -1015,9 +1031,9 @@ color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 85px;
   right: 63px;
-  background-image: url("../img/tab.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
-  background-position: -10px -409px;
+  background-position: -62px -3545px;
 }
 
 .tab__content h2,
@@ -1048,7 +1064,7 @@ color: rgba(0, 0, 0, 0.6);
   margin-right: 40px;
   width: 260px;
   height: 100px;
-  background-image: url("../img/logos.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
 }
 
@@ -1057,35 +1073,35 @@ color: rgba(0, 0, 0, 0.6);
 }
 
 .partners__item1 {
-  background-position: -20px -20px;
+  background-position: -67px -1939px;
 }
 
 .partners__item1:hover {
-  background-position: -20px -580px;
+  background-position: -67px -2499px;
 }
 
 .partners__item2 {
-  background-position: -20px -160px;
+  background-position: -67px -2079px;
 }
 
 .partners__item2:hover {
-  background-position: -20px -720px;
+  background-position: -67px -2639px;
 }
 
 .partners__item3 {
-  background-position: -20px -300px;
+  background-position: -67px -2217px;
 }
 
 .partners__item3:hover {
-  background-position: -20px -860px;
+  background-position: -67px -2777px;
 }
 
 .partners__item4 {
-  background-position: -20px -440px;
+  background-position: -70px -2359px;
 }
 
 .partners__item4:hover {
-  background-position: -20px -1000px;
+  background-position: -70px -2919px;
 }
 
 .content__index {
@@ -1270,7 +1286,7 @@ float: right;
 .footer__setting a::before {
   position: absolute;
   content: "";
-  background-image: url("../img/icons.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
 }
 
@@ -1279,7 +1295,7 @@ float: right;
   height: 12px;
   top: 12px;
   left: 3px;
-  background-position: -10px -10px;
+  background-position: -60px -190px;
 }
 
 .footer__comparison {
@@ -1291,7 +1307,7 @@ float: right;
   height: 10px;
   top: 15px;
   left: 9px;
-  background-position: -10px -42px;
+  background-position: -60px -222px;
 }
 
 .footer__basket::before {
@@ -1299,7 +1315,7 @@ float: right;
   height: 12px;
   top: 13px;
   left: 1px;
-  background-position: -10px -72px;
+  background-position: -60px -252px;
 }
 
 .footer-left {
@@ -1348,7 +1364,7 @@ float: right;
   font-size: 0;
   vertical-align: top;
   text-decoration: none;
-  background-image: url("../img/icons.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   opacity: 0.3;
 }
@@ -1362,15 +1378,15 @@ float: right;
 }
 
 .social__btn_fb {
-  background-position: -10px -234px;
+  background-position: -60px -284px;
 }
 
 .social__btn_inst {
-  background-position: -10px -292px;
+  background-position: -60px -342px;
 }
 
 .social__btn_tw {
-  background-position: -10px -350px;
+  background-position: -60px -400px;
 }
 
 /*  5.2. Заголовок каталога */
@@ -2370,6 +2386,10 @@ float: right;
   background: gray url("../img/map-big.png");
   -webkit-box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
           box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+}
+
+.modalmap iframe {
+  border-width: 0;
 }
 
 .modalmap_page {
