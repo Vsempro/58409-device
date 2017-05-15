@@ -74,8 +74,9 @@ body {
 }
 
 .header__items {
-  margin-top: 15px;
   float: right;
+  width: 512px;
+  margin-top: 15px;
 }
 
 /*  1.2. Элементы
@@ -250,16 +251,20 @@ color: rgba(0, 0, 0, 0.6);
 
 .header__items .header__comparison {
   float: left;
+  margin-left: 200px;
   max-width: 70px;
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   background-position: -50px -116px;
 }
 
+.header__items_catalog .header__comparison_catalog {
+  margin-left: 48px;
+}
+
 .header__items .header__basket {
   float: right;
   max-width: 70px;
-  margin-left: 25px;
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   background-position: -53px -147px;
@@ -323,7 +328,7 @@ color: rgba(0, 0, 0, 0.6);
 
 .navigation__contacts {
   max-width: 143px;
-  margin-left: 83px;
+  margin-left: 91px;
 }
 
 .mainList:hover,
@@ -340,15 +345,15 @@ color: rgba(0, 0, 0, 0.6);
   opacity: 0.3;
 }
 
-.navigation__contacts a {
-  padding-right: 5px;
-}
-
 .navigation__list a {
   display: block;
   padding: 10px;
   color: black;
   text-decoration: none;
+}
+
+.navigation__contacts a {
+  padding-right: 0;
 }
 
 .navigation__list .navigation__goods {
@@ -442,8 +447,9 @@ color: rgba(0, 0, 0, 0.6);
 }
 
 .header__items_catalog {
-  width: 510px;
-  margin-top: 13px;
+  float: right;
+  width: 512px;
+  margin-top: 12px;
 }
 
 .header__user_catalog {
@@ -1288,6 +1294,11 @@ float: right;
   content: "";
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.footer__setting a:hover::before {
+  opacity: 0.6;
 }
 
 .footer__login::before {
@@ -1391,14 +1402,10 @@ float: right;
 
 /*  5.2. Заголовок каталога */
 
-.container_catalog {
-  width: 1105px;
-  padding-left: 75px;
-}
-
 .main__title {
   margin: 0;
   margin-top: 37px;
+  margin-left: 10px;
   font-size: 47px;
   letter-spacing: 0.015em;
   color: black;
@@ -1414,7 +1421,6 @@ float: right;
   display: inline-block;
   vertical-align: top;
   color: #464646;
-  margin-left: -10px;
   margin-top: 15px;
 }
 
@@ -1463,84 +1469,54 @@ float: right;
    6.1. Сетка
 */
 
-.main-catalog {
-  margin-top: 40px;
-}
-
-.left {
-  position: relative;
-  float: left;
-  width: 25%;
-}
-
-.left::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 70px;
-  bottom: -110px;
-  left: 0px;
-  background-color: #dcdcdc;
-  z-index: -1;
-}
-
-.left::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1208px;
-  bottom: -1318px;
-  left: 0px;
+.catalog {
+  margin-top: 37px;
   background-color: #efefef;
-  z-index: -1;
-}
-
-.right {
-  position: relative;
-  float: right;
-  width: 75%;
-}
-
-.right::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 70px;
-  bottom: -110px;
-  left: 0px;
-  background-color: #ebebeb;
-  z-index: -1;
 }
 
 .filter {
   float: left;
-  width: 24%;
-  padding-bottom: 495px;
-  background-color: #eeeeee;
+  width: 30%;
 }
 
-.showcase {
+.filter__width {
   float: right;
-  width: 86%;
+  width: 267px;
 }
 
-.sorting {
-  float: right;
-  width: 76%;
+.filter__form {
+  margin-top: 84px;
+}
+
+.filter__title {
+  background-color: #dbdbdb;
+}
+
+.sorting__title {
   background-color: #ebebeb;
 }
 
 .showcase {
-  float: left;
-  max-width: 757px;
-  margin-top: 67px;
-  margin-left: 80px;
+  float: right;
+  width: 70%;
+}
+
+.showcase__width {
+  width: 835px;
+}
+
+.sorting__background {
+  padding-bottom: 72px;
+  background-color: white;
+}
+
+.goods {
+  padding-top: 72px;
+  padding-left: 75px;
 }
 
 .goods-item {
   float: left;
-  min-height: 507px;
-
 }
 
 .goods-item:nth-child(2n) {
@@ -1548,22 +1524,28 @@ float: right;
 }
 
 .pagination {
-  max-width: 760px;
+  margin-left: 75px;
   background-color: #ebebeb;
 }
 
 /*  6.2. Элементы */
-.filter_width {
-  max-width: 268px;
-}
 
-.filter__title,
-.sorting__title {
+.filter__title h2,
+.sorting__title h2 {
+  margin: 0;
   padding: 25px 0;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  font-family: Gilroy, Arial, sans-serif;
 }
 
-.filter__title {
-  background-color: #dcdcdc;
+.sorting__title h2 {
+  float: left;
+  margin-left: 74px;
 }
 
 .cost__controls {
@@ -1622,7 +1604,7 @@ float: right;
   border: none;
 }
 
-.filter__form fieldset {
+.filter__width fieldset {
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
@@ -1631,22 +1613,17 @@ float: right;
   border: none;
 }
 
-.filter__form .form__bluetooth {
-  margin-top: 25px;
+.filter__width .form__bluetooth {
+  margin-top: 44px;
 }
 
-.filter__form fieldset::before {
+.filter__width fieldset::before {
   content: "";
   position: absolute;
   width: 200px;
   height: 2px;
   top: -12px;
   background-color: black
-}
-
-.color p,
-.form__bluetooth p {
-  line-height: 27px;
 }
 
 .color input[type="checkbox"],
@@ -1657,6 +1634,8 @@ float: right;
 
 .color label,
 .form__bluetooth label {
+  display: block;
+  margin: 1px 19px;
   position: relative;
   padding-top: 5px;
   padding-left: 24px;
@@ -1726,13 +1705,13 @@ float: right;
   top: 12px;
 }
 
-.color input[type="checkbox"] + label::after,
-.form__bluetooth input[type="radio"] + label::after {
+.colorbox + label::after,
+.bluetoothradio + label::after {
   content: none;
 }
 
-.color input[type="checkbox"]:checked + label::after,
-.form__bluetooth input[type="radio"]:checked + label::after  {
+.colorbox:checked + label::after,
+.bluetoothradio:checked + label::after  {
   content: "";
 }
 
@@ -1741,36 +1720,11 @@ float: right;
 }
 
 .button__form {
-  margin: 15px;
-  margin-left: 0;
+  margin-top: 32px;
+  margin-left: 3px;
 }
 
-.sorting__title {
-  float: left;
-}
-
-.filter__title h2,
-.sorting__title h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: normal;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: black;
-  font-weight: bold;
-  font-family: Gilroy, Arial, sans-serif;
-}
-
-.sorting__title h2 {
-  margin-left: 75px;
-}
-
-.filter__form {
-  margin-top: 81px;
-}
-
-.filter__form legend{
+.filter__width legend{
   padding: 0;
   font-size: 18px;
   line-height: normal;
@@ -1819,7 +1773,7 @@ float: right;
 .sorting__list ul {
   margin: 0;
   padding: 0;
-  margin-left: 35px;
+  margin-left: 33px;
   list-style: none;
   font-size: 0;
 }
@@ -1865,18 +1819,18 @@ float: right;
   font-size: 0;
   vertical-align: top;
   text-decoration: none;
-  background-image: url("../img/icons.png");
+  background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   opacity: 0.2;
 }
 
 .sorting__button_up {
   margin-right: 20px;
-  background-position: -10px -462px;
+  background-position: -60px -458px;
 }
 
 .sorting__button_down {
-  background-position: -10px -491px;
+  background-position: -60px -487px;
 }
 
 .sorting__button_up:hover,
@@ -1990,8 +1944,14 @@ float: right;
 }
 
 .goods__footer {
-  margin-top: 35px;
-  max-height: 90px;
+  margin-top: 30px;
+  min-height: 95px;
+}
+
+
+.goods-item:last-child .goods__footer,
+.goods-item:nth-last-child(2) .goods__footer {
+  min-height: 87px;
 }
 
 .goods__footer h3 {
@@ -2076,7 +2036,7 @@ float: right;
 
 .pagination .pagination_prev {
   float: left;
-  margin-right: 190px;
+  margin-right: 195px;
   padding: 25px 30px;
 }
 
@@ -2181,10 +2141,6 @@ float: right;
   }
 }
 
-.modalcontent p {
-  margin: 0;
-}
-
 .modalcontent input,
 .modalcontent textarea {
   border: 0;
@@ -2200,7 +2156,7 @@ float: right;
   margin-left: -480px;
   margin-top: -280px;
   padding: 0 100px;
-  padding-top: 90px;
+  padding-top: 85px;
   font-size: 14px;
   letter-spacing: 0;
   color: #464646;
@@ -2239,6 +2195,23 @@ float: right;
 .modalcontent_error input[type="email"] {
   background-color: #edb5b5;
   opacity: 0.5;
+}
+
+.userform label {
+  display: block;
+
+}
+
+.userform__top label {
+    margin: 2px 0;
+}
+
+.userform__title2 label {
+  margin: 2px 0;
+}
+
+.userform__top {
+  margin-top: 10px;
 }
 
 .modalcontent__button {
@@ -2310,8 +2283,7 @@ float: right;
 }
 
 .userform__title3 {
-  display: block;
-  margin-top: 35px;
+  margin-top: 32px;
 }
 
 .userform__user,
@@ -2327,8 +2299,9 @@ float: right;
 
 .userform .userform__user,
 .userform .userform__email {
-  min-width: 340px;
-  padding: 17px 10px;
+  width: 335px;
+  padding: 17px 5px;
+  padding-left: 20px;
   margin-top: 10px;
   border: none;
   background-color: #eaeaea;
@@ -2337,7 +2310,8 @@ float: right;
 
 .userform .userform__text {
   max-width: 740px;
-  padding: 17px 10px;
+  padding: 17px 5px;
+  padding-left: 20px;
   margin-top: 10px;
   border: none;
   background-color: #eaeaea;
@@ -2370,7 +2344,7 @@ float: right;
 
 .userform__button {
   margin: 0;
-  margin-top: 35px;
+  margin-top: 30px;
   z-index: 12;
 }
 
