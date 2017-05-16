@@ -75,8 +75,18 @@ body {
 
 .header__items {
   float: right;
-  width: 512px;
+  width: 50%;
   margin-top: 15px;
+}
+
+.userblock {
+  float: left;
+  margin-left: 17px;
+}
+
+.cart {
+  float: right;
+  width: 230px;
 }
 
 /*  1.2. Элементы
@@ -243,7 +253,6 @@ color: rgba(0, 0, 0, 0.6);
 
 .header__items .header__login {
   float: left;
-  max-width: 130px;
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   background-position: -57px -86px;
@@ -251,20 +260,13 @@ color: rgba(0, 0, 0, 0.6);
 
 .header__items .header__comparison {
   float: left;
-  margin-left: 200px;
-  max-width: 70px;
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   background-position: -50px -116px;
 }
 
-.header__items_catalog .header__comparison_catalog {
-  margin-left: 48px;
-}
-
 .header__items .header__basket {
   float: right;
-  max-width: 70px;
   background-image: url("../img/spiteDevice.png");
   background-repeat: no-repeat;
   background-position: -53px -147px;
@@ -359,12 +361,15 @@ color: rgba(0, 0, 0, 0.6);
 .navigation__list .navigation__goods {
   display: none;
   position: absolute;
-  width: 1160px;
-  height: 155px;
+  width: 560px;
+  height: 137px;
   left: -50px;
   top: 40px;
   margin: 0;
   padding: 0;
+  padding-top: 18px;
+  padding-left: 55px;
+  padding-right: 545px;
   list-style: none;
   background-color: #f7e296;
   z-index: 1;
@@ -384,48 +389,39 @@ color: rgba(0, 0, 0, 0.6);
 
 .navigation__goods li {
   float: left;
-  margin: 15px;
+  width: 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .navigation__goods .reality {
-  max-width: 190px;
-  max-height: 25px;
-  margin-left: 60px;
+  width: 40%;
 }
 
-.navigation__goods .bracelets {
-  max-width: 135px;
-  max-height: 25px;
-  margin-left: 35px;
+.navigation__goods .bracelets_a {
+  padding-left: 20px;
 }
 
-.navigation__goods .quadcopters {
-  max-width: 120px;
-  max-height: 25px;
-  margin-left: 50px;
-  margin-right: 495px;
+.navigation__goods .quadcopters_a {
+  padding-left: 53px;
 }
 
 .navigation__goods .monopods {
-  max-width: 165px;
-  max-height: 25px;
-  margin-top: 0;
-  margin-left: 60px;
+  width: 40%;
+  margin-top: 10px;
 }
 
 .navigation__goods .watchs {
-  max-width: 145px;
-  max-height: 25px;
-  margin-top: 0;
-  margin-right: 715px;
-  margin-left: 57px;
+  margin-top: 10px;
+}
+
+.navigation__goods .watchs_a {
+  padding-left: 20px;
 }
 
 .navigation__goods .camera {
-  max-width: 250px;
-  max-height: 25px;
-  margin-top: 0;
-  margin-left: 60px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .navigation__goods a {
@@ -448,7 +444,7 @@ color: rgba(0, 0, 0, 0.6);
 
 .header__items_catalog {
   float: right;
-  width: 512px;
+  width: 50%;
   margin-top: 12px;
 }
 
@@ -457,13 +453,8 @@ color: rgba(0, 0, 0, 0.6);
 }
 
 .header__items_catalog .header__user_catalog {
-  margin-left: 0;
   padding: 10px;
   opacity: 0.3;
-}
-
-.header__comparison_catalog {
-  margin-left: 45px;
 }
 
 /* 2 Slider
@@ -1476,7 +1467,7 @@ float: right;
 
 .filter {
   float: left;
-  width: 30%;
+  width: calc(50% - 252px);
 }
 
 .filter__width {
@@ -1498,7 +1489,7 @@ float: right;
 
 .showcase {
   float: right;
-  width: 70%;
+  width: calc(50% + 252px);
 }
 
 .showcase__width {
